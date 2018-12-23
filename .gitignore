@@ -1,0 +1,29 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Ignore everything
+*
+
+# Frontend/starter
+!.gitignore
+!.README.md
+!resources/
+
+# Assets
+# Frontend/starter assets
+!resources/assets/
+
+# Frontend/starter assets/styles
+!resources/assets/styles/
+!resources/assets/styles/**
+
+# Frontend/starter assets/scripts
+!resources/assets/scripts/
+!resources/assets/scripts/**
+
+# Views
+# Frontend/starter views
+!resources/views
+!resources/views/**
+
+# Remove all .DS_Store
+**/.DS_Store
