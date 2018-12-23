@@ -3,25 +3,31 @@
 # Ignore everything
 *
 
-# Frontend/starter
-!.gitignore
+# Starter
 !.README.md
+!.gitignore
+!.package.json
 !resources/
 
+# App
+# Starter assets
+!app/
+!app/setup.php
+
 # Assets
-# Frontend/starter assets
+# Starter assets
 !resources/assets/
 
-# Frontend/starter assets/styles
+# Starter assets/styles
 !resources/assets/styles/
 !resources/assets/styles/**
 
-# Frontend/starter assets/scripts
+# Starter assets/scripts
 !resources/assets/scripts/
 !resources/assets/scripts/**
 
 # Views
-# Frontend/starter views
+# Starter views
 !resources/views
 !resources/views/**
 
