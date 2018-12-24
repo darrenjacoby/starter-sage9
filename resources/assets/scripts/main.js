@@ -1,24 +1,19 @@
-// import external dependencies
-import 'jquery';
+// npm deps
+// yarn add when-dom-ready
+import whenDomReady from 'when-dom-ready';
 
-// Import everything from autoload
+// autoload
 import './autoload/**/*'
 
-// import local dependencies
-import Router from './util/Router';
-import common from './routes/common';
-import home from './routes/home';
-import aboutUs from './routes/about';
+// comps
+// core
+/*
+import imgs from '../comps/imgs';
+import anims from '../comps/anims';
+import banner from '../comps/banner';
+*/
 
-/** Populate Router instance with DOM routes */
-const routes = new Router({
-  // All pages
-  common,
-  // Home page
-  home,
-  // About Us page, note the change from about-us to aboutUs.
-  aboutUs,
+// load
+whenDomReady().then(() => {
+  // run comps
 });
-
-// Load Events
-jQuery(document).ready(() => routes.loadEvents());
