@@ -12,6 +12,8 @@ function init() {
 
   // observer
   let instances = intersectionObserver(el, {
+    // once: true,
+    // rootMargin: '0% 0% 0% 0%',
     // on enter
     enter: (item) => {
       // add class from data-anim attribute
