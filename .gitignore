@@ -7,14 +7,19 @@
 !.README.md
 !.gitignore
 !.package.json
-!resources/
 
 # App
 # Starter assets
 !app/
 !app/setup.php
+!app/gutenberg.php
+!app/images.php
+!app/intervention.php
+!app/utils.php
 
 # Assets
+!resources/
+
 # Starter assets
 !resources/assets/
 
