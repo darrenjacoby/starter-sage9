@@ -25,8 +25,8 @@ function init() {
       imgLoaded(src).then(() => {
         // change img srcset
         item.srcset = item.getAttribute('data-srcset');
-        // add class js-loaded
-        item.classList.add('js-loaded');
+        // add class loaded
+        item.classList.add('loaded');
       });
     },
     // exit: (item) => {},

@@ -37,7 +37,7 @@ export default function (selector = '[data-src]', config = {}) {
   return {
     observe() {
       const els = document.querySelectorAll(selector);
-      els.forEach(el => observer.observe(el));
+      Array.from(els).map(el => observer.observe(el));
     },
   }
 }
