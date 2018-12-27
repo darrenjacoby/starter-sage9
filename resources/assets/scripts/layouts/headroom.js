@@ -9,19 +9,19 @@ let config = {
   offset: 150,
   classes: {
     // el initialised
-    initial: 'banner-headroom',
+    initial: 'headroom',
     // scrolling up
-    pinned: 'banner-pinned',
+    pinned: 'headroom-pinned',
     // scrolling down
-    unpinned: 'banner-unpinned',
+    unpinned: 'headroom-unpinned',
     // above offset
-    top: 'banner-top',
+    top: 'headroom-top',
     // below offset
-    notTop : 'banner-not-top',
+    notTop : 'headroom-not-top',
     // at bottom of scoll area
-    bottom : 'banner-bottom',
+    bottom : 'headroom-bottom',
     // not at bottom of scroll area
-    notBottom : 'banner-not-bottom',
+    notBottom : 'headroom-not-bottom',
   },
 };
 

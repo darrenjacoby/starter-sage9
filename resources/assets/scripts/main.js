@@ -10,8 +10,8 @@ import jump from './base/jump';
 import rellax from './base/rellax';
 
 // layouts
-import banner from './layouts/banner';
 import drawer from './layouts/drawer';
+import headroom from './layouts/headroom';
 
 // load
 whenDomReady().then(() => {
@@ -28,8 +28,8 @@ whenDomReady().then(() => {
   rellax.init();
 
   // layouts
-  // banner
-  banner.init();
   // drawer
   drawer.init();
+  // headroom
+  headroom.init();
 });
