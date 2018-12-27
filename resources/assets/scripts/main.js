@@ -2,15 +2,20 @@
 // yarn add when-dom-ready
 import whenDomReady from 'when-dom-ready';
 
-// comps
-import anims from './comps/anims';
-import fontfaces from './comps/fontfaces';
-import imgs from './comps/imgs';
-import jump from './comps/jump';
-import rellax from './comps/rellax';
+// base
+import anims from './base/anims';
+import fontfaces from './base/fontfaces';
+import imgs from './base/imgs';
+import jump from './base/jump';
+import rellax from './base/rellax';
+
+// layouts
+import banner from './layouts/banner';
+import drawer from './layouts/drawer';
 
 // load
 whenDomReady().then(() => {
+  // base
   // animations
   anims.init();
   // font faces
@@ -21,4 +26,10 @@ whenDomReady().then(() => {
   jump.init();
   // rellax
   rellax.init();
+
+  // layouts
+  // banner
+  banner.init();
+  // drawer
+  drawer.init();
 });
