@@ -1,5 +1,5 @@
-// yarn add lodash.throttle
-import throttle from 'lodash.throttle';
+// yarn add lodash
+import throttle from 'lodash/throttle';
 
 let el = '.js-drawer';
 let state = 'drawer-open';
