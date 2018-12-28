@@ -12,13 +12,13 @@
 .aligncenter {
   display: block;
   height: auto;
-  margin: gutter() auto;
+  margin: $grid-gutter auto;
 }
 
 .alignleft,
 .alignright {
   height: auto;
-  margin-bottom: gutter();
+  margin-bottom: $grid-gutter;
 }
 
 .alignleft {
