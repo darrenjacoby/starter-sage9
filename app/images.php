@@ -18,8 +18,8 @@ add_image_size('66vw', 1200, 9999);
 add_image_size('66vw@2x', 2400, 9999);
 
 // based on 1400px (xx) container
-add_image_size('3of12', 350, 9999);
-add_image_size('3of12@2x', 700, 9999);
+add_image_size('3/12', 350, 9999);
+add_image_size('3/12@2x', 700, 9999);
 
 add_image_size('4/12', 460, 9999);
 add_image_size('4/12@2x', 920, 9999);
@@ -35,8 +35,8 @@ add_image_size('12/12@2x', 2800, 9999);
 
 // based on 1600px (xxx) container
 /*
-add_image_size('3of12', 400, 9999);
-add_image_size('3of12@2x', 800, 9999);
+add_image_size('3/12', 400, 9999);
+add_image_size('3/12@2x', 800, 9999);
 
 add_image_size('4/12', 600, 9999);
 add_image_size('4/12@2x', 1200, 9999);
@@ -53,8 +53,8 @@ add_image_size('12/12@2x', 3200, 9999);
 
 // based on 1200px (xl) container
 /*
-add_image_size('3of12', 300, 9999);
-add_image_size('3of12@2x', 600, 9999);
+add_image_size('3/12', 300, 9999);
+add_image_size('3/12@2x', 600, 9999);
 
 add_image_size('4/12', 400, 9999);
 add_image_size('4/12@2x', 800, 9999);
