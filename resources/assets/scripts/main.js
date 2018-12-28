@@ -3,7 +3,7 @@
 import whenDomReady from 'when-dom-ready';
 
 // Base
-import fontFaces from './base/fontFaces';
+// import fontFaces from './base/fontFaces';
 import imgs from './base/imgs';
 import jump from './base/jump';
 
@@ -20,7 +20,7 @@ import headroom from './layouts/headroom';
  */
 whenDomReady().then(() => {
   // Base
-  fontFaces.init();
+  // fontFaces.init();
   imgs.init();
   jump.init();
 

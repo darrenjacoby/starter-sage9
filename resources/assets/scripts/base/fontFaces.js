@@ -1,20 +1,19 @@
 // https://fontfaceobserver.com/
 // yarn add fontfaceobserver
-// import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from 'fontfaceobserver';
 
 /**
  * Init
  */
 function init() {
-  // let font = new FontFaceObserver('Montserrat');
+  let font = new FontFaceObserver('__FONT__');
 
-  /*
   font.load().then(() => {
     document.body.classList.add('fonts-loaded');
   }).catch(() => {
     console.log('font failed to load');
   });
-  */
+
 }
 
 export default {
