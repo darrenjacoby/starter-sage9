@@ -3,12 +3,12 @@
 # Ignore everything
 *
 
-# Starter
+# starter
 !.README.md
 !.gitignore
 !.package.json
 
-# App
+# app
 !app/
 !app/setup.php
 !app/gutenberg.php
@@ -16,24 +16,23 @@
 !app/intervention.php
 !app/utils.php
 
-# Assets
+# resources
 !resources/
 
-# Starter assets
+# assets
 !resources/assets/
 
-# Starter assets/styles
+# assets/styles
 !resources/assets/styles/
 !resources/assets/styles/**
 
-# Starter assets/scripts
+# assets/scripts
 !resources/assets/scripts/
 !resources/assets/scripts/**
 
-# Views
-# Starter views
+# views
 !resources/views
 !resources/views/**
 
-# Remove all .DS_Store
+# system files
 **/.DS_Store
