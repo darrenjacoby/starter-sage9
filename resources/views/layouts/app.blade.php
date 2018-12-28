@@ -9,11 +9,6 @@
         <main class="main">
           @yield('content')
         </main>
-        @if (App\display_sidebar())
-          <aside class="sidebar">
-            @include('partials.sidebar')
-          </aside>
-        @endif
       </div>
     </div>
     @php do_action('get_footer') @endphp
