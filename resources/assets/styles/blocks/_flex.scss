@@ -233,6 +233,8 @@
 
     // row
     .row#{$c} {
+      display: flex;
+      flex-wrap: wrap;
       margin-right: ($grid-gutter / -2);
       margin-left: ($grid-gutter / -2);
     }
