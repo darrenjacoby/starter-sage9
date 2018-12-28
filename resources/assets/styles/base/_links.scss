@@ -27,3 +27,8 @@ a:not([class]) {
   }
 }
 */
+
+// for anchor links using jumpjs
+[data-jump] {
+  cursor: pointer;
+}

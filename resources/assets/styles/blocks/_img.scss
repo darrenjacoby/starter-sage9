@@ -20,20 +20,9 @@
   object-fit: cover;
 }
 
-// for images using intersection observer
-// default image fade
-img[data-src] {
-  opacity: 0;
-  transition: opacity get-duration(slow);
-}
-
-img[data-src].loaded {
-  opacity: 1;
-}
-
 /*
 // optional image blur
-img.img-blur[data-src] {
+.img-blur[data-src] {
   filter: blur(10px);
   transition: opacity get-duration(slow);
   opacity: 1;
@@ -45,7 +34,7 @@ img.img-blur[data-src] {
   margin: -10px;
 }
 
-img.img-blur[data-src].loaded {
+.img-blur[data-src].loaded {
   filter: blur(0);
 }
 */

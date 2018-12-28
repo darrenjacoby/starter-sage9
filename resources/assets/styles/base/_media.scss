@@ -16,3 +16,14 @@ img[src=""],
 img:not([src]) {
   opacity: 0;
 }
+
+// for images using intersection observer
+// default image fade
+img[data-src] {
+  opacity: 0;
+  transition: opacity get-duration(slow);
+}
+
+img[data-src].loaded {
+  opacity: 1;
+}
