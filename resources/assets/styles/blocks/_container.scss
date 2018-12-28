@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: get-break(xl);
+  max-width: 90%;
+}
+
+// esc container
+@each $bp in map-keys($breakpoints) {
+  $c: get-mq-class($bp);
+
+  @include mq($bp) {
+    .container-esc#{$c} {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+
+    /*
+    .container-esc-l#{$c} {
+      margin-left: calc(50% - 50vw);
+    }
+    */
+
+    /*
+    .container-esc-r#{$c} {
+      margin-right: calc(50% - 50vw);
+    }
+    */
+  }
+}

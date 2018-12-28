@@ -1,0 +1,7 @@
+@function get-mq-class($bp) {
+  @if ($bp != 0) {
+    @return "\\:#{$bp}";
+  }
+
+  @return "";
+}

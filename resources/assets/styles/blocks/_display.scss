@@ -1,0 +1,25 @@
+@each $bp in map-keys($breakpoints) {
+  $c: get-mq-class($bp);
+
+  @include mq($bp) {
+    .none#{$c} {
+      display: none;
+    }
+
+    .block#{$c} {
+      display: block;
+    }
+
+    .inline-block#{$c} {
+      display: inline-block;
+    }
+
+    .flex#{$c} {
+      display: flex;
+    }
+
+    .inline-flex#{$c} {
+      display: inline-flex;
+    }
+  }
+}

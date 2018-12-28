@@ -1,0 +1,33 @@
+.banner {
+  padding: 1rem 0;
+}
+
+.banner-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // flex-direction: row-reverse;
+}
+
+.banner-logo {
+  flex-basis: 10rem;
+}
+
+.banner-nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.banner-nav > li {
+  padding: 0 0.5rem;
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}

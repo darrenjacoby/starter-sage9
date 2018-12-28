@@ -1,0 +1,27 @@
+/**
+ * Output font size from config or custom value
+ *
+ * @requires mixins/fluid
+ * @params $font-size, $ratio, $min-vw, $max-vw
+ */
+@mixin font-size($font-size, $ratio: $font-size-ratio, $min-vw: get-break($fluid-min), $max-vw: get-break($fluid-max)) {
+  // check if user is using the $font-sizes map key
+  @if (map-get($font-sizes, $font-size)) {
+    $map: map-get($font-sizes, $font-size);
+
+    // get the font-size from $map
+    @if map-has-key($map, size) {
+      $font-size: map-get($map, size);
+    }
+
+    // if there is not a custom ratio being passed in
+    @if ($ratio == $font-size-ratio) {
+      // then get the ratio from $map
+      @if map-has-key($map, ratio) {
+        $ratio: map-get($map, ratio);
+      }
+    }
+  }
+
+  @include fluid(font-size, $font-size, $ratio, $min-vw, $max-vw);
+}

@@ -1,0 +1,40 @@
+[class^="ratio"],
+[class*=" ratio"] {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+}
+
+.ratio-1-1 {
+  padding-bottom: 100%;
+}
+
+.ratio-4-3 {
+  padding-bottom: 75%;
+}
+
+.ratio-8-5 {
+  padding-bottom: 62.5%;
+}
+
+.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.ratio-2-1 {
+  padding-bottom: 50%;
+}
+
+.ratio-3-1 {
+  padding-bottom: 33.333%;
+}
+
+.ratio-4-1 {
+  padding-bottom: 25%;
+}
+
+/*
+.ratio-custom {
+  padding-bottom: percentage(height / width * 1) // can use unitless
+}
+*/

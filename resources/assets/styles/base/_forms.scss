@@ -1,0 +1,27 @@
+/**
+ * Forms
+ *
+ * @recommended
+ * form, input, textarea, label, fieldset, legend, select, optgroup, option, button, datalist, keygen, output
+ */
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}

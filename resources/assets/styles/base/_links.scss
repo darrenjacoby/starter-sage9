@@ -1,0 +1,29 @@
+/**
+ * Links
+ *
+ * @recommended
+ * a:link, a:visited, a:hover, a:active
+ */
+a {
+  transition: color get-duration(fast);
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+}
+
+/*
+a:not([class]) {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    color: get-color(primary);
+  }
+}
+*/

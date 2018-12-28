@@ -1,0 +1,45 @@
+/**
+ * Output fluid sizing using calc values and 100vw.
+ *
+ * @requires functions/calc-rem
+ * @requires functions/get-unitless
+ * @params $props, $max-value, $ratio, $min-vw, $max-vw
+ * @link http://www.sassmeister.com/gist/7f22e44ace49b5124eec
+ */
+@mixin fluid($props, $max-value, $ratio: $fluid-ratio, $min-vw: get-break($fluid-min), $max-vw: get-break($fluid-max)) {
+  $min-value: $max-value / $ratio;
+
+  // always calc in rem
+  @if (unit($min-value) == "px") {
+    $min-value: calc-rem($min-value);
+  }
+
+  @if (unit($max-value) == "px") {
+    $max-value: calc-rem($max-value);
+  }
+
+  @if (unit($min-vw) == "px") {
+    $min-vw: calc-rem($min-vw);
+  }
+
+  @if (unit($max-vw) == "px") {
+    $max-vw: calc-rem($max-vw);
+  }
+
+  // run
+  @each $prop in $props {
+    #{$prop}: $min-value;
+  }
+
+  @media (min-width: $min-vw) {
+    @each $prop in $props {
+      #{$prop}: calc(#{$min-value} + #{get-unitless($max-value - $min-value)} * (100vw - #{$min-vw}) / #{get-unitless($max-vw - $min-vw)});
+    }
+  }
+
+  @media (min-width: $max-vw) {
+    @each $prop in $props {
+      #{$prop}: $max-value;
+    }
+  }
+}

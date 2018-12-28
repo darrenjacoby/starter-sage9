@@ -1,0 +1,51 @@
+// basic image utils
+.img-cover {
+  object-fit: cover;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+// to mask image as background
+.img-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-mask img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// for images using intersection observer
+// default image fade
+img[data-src] {
+  opacity: 0;
+  transition: opacity get-duration(slow);
+}
+
+img[data-src].loaded {
+  opacity: 1;
+}
+
+/*
+// optional image blur
+img.img-blur[data-src] {
+  filter: blur(10px);
+  transition: opacity get-duration(slow);
+  opacity: 1;
+
+  // req to avoid blurred edges
+  // safer than using scale(1.1)
+  min-width: calc(100% + 20px);
+  min-height: calc(100% + 20px);
+  margin: -10px;
+}
+
+img.img-blur[data-src].loaded {
+  filter: blur(0);
+}
+*/

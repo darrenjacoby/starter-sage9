@@ -1,0 +1,27 @@
+// https://alligator.io/css/font-face/
+// https://css-tricks.com/snippets/css/system-font-stack/
+@font-face {
+  font-family: System;
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local(".SFNSText-Light"),
+    local(".HelveticaNeueDeskInterface-Light"),
+    local(".LucidaGrandeUI"),
+    local("Ubuntu Light"),
+    local("Segoe UI Light"),
+    local("Roboto-Light"),
+    local("DroidSans"),
+    local("Tahoma");
+}
+
+/*
+@font-face {
+  font-family: "";
+  src:
+    url("../fonts/__FILE__.woff2") format("woff2"),
+    url("../fonts/__FILE__.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+*/

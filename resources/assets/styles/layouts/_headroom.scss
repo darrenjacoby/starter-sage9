@@ -1,0 +1,23 @@
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform get-duration(fast);
+  will-change: transform;
+  z-index: 1000;
+  transform: translateY(-150%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.headroom-pinned {
+  transform: translateY(0%);
+}
+
+.headroom-unpinned, {
+  transform: translateY(-150%);
+}
+
+.headroom-top {
+  transform: translateY(-150%);
+}

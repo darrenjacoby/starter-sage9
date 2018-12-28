@@ -1,25 +1,43 @@
-@import "common/variables";
+// Core
+@import "config";
+@import "deps";
+@import "utils";
 
-/** Import everything from autoload */
-@import "./autoload/**/*";
+// Base
+@import "base/elements";
+@import "base/formatting";
+@import "base/forms";
+@import "base/headings";
+@import "base/links";
+@import "base/lists";
+@import "base/media";
+@import "base/tables";
 
-/**
- * Import npm dependencies
- *
- * Prefix your imports with `~` to grab from node_modules/
- * @see https://github.com/webpack-contrib/sass-loader#imports
- */
-// @import "~some-node-module";
+// Blocks
+@import "blocks/anims";
+@import "blocks/clear";
+@import "blocks/container";
+@import "blocks/display";
+@import "blocks/flex";
+@import "blocks/img";
+@import "blocks/jump";
+@import "blocks/ratio";
+@import "blocks/rellax";
+@import "blocks/text";
+@import "blocks/pseudo";
 
-/** Import theme styles */
-@import "common/global";
-@import "components/buttons";
-@import "components/comments";
-@import "components/forms";
-@import "components/wp-classes";
-@import "layouts/header";
-@import "layouts/sidebar";
+// Comps
+@import "comps/wp-classes";
+
+// Layouts
+@import "layouts/banner";
+@import "layouts/drawer";
 @import "layouts/footer";
-@import "layouts/pages";
-@import "layouts/posts";
+@import "layouts/headroom";
 @import "layouts/tinymce";
+
+// Views
+// @import "views/homepage";
+
+// Polyfills
+// @import "polyfills";

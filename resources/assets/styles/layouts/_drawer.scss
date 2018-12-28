@@ -1,0 +1,61 @@
+.js-drawer {
+  cursor: pointer;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  max-width: 20rem;
+  transform: translateX(120%);
+  background-color: hsl(0, 0, 100%);
+  transition: transform get-duration(fast);
+  z-index: 2000;
+  // box-shadow: 0 0 1rem 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.drawer-open .drawer {
+  transform: translateX(0%);
+}
+
+.drawer-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity get-duration(fast);
+}
+
+.drawer-open .drawer-bg {
+  opacity: 1;
+  visibility: visible;
+  background-color: hsla(0, 0, 100%, 0.9);
+}
+
+.drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 1rem 2rem;
+}
+
+.drawer-main {
+  width: 100%;
+}
+
+.drawer-nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.drawer-nav a {
+  display: block;
+  position: relative;
+}

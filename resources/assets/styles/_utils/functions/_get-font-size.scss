@@ -1,0 +1,15 @@
+/**
+ * Get size from config/font-sizes.scss
+ *
+ * @requires $font-sizes
+ * @params $font-size
+ */
+@function get-font-size($font-size) {
+  @if map-has-key($font-sizes, $font-size) {
+    $font-size: map-get(map-get($font-sizes, $font-size), size);
+
+    @return calc-rem($font-size);
+  }
+
+  @warn "#{$font-size} not found.";
+}

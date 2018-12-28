@@ -1,0 +1,24 @@
+.rellax-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+// image wrapped in rellax-bg
+.rellax-bg img[data-rellax] {
+  width: auto;
+  min-width: 100%;
+  height: auto;
+  min-height: calc((100% + 10vh) + 2px); // 100% + 10vh for speed +/-1, +2px rounding issues
+}
+
+/*
+// image wrapped in rellax-bg with class img-blur
+.rellax-bg img.img-blur[data-rellax] {
+  min-width: calc(100% + 20px);
+}
+*/

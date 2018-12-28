@@ -1,0 +1,55 @@
+/**
+ * https://www.modularscale.com/
+ *
+ * 1.125 major second
+ * 1.25 major third
+ * 1.333 perfect fourth
+ * 1.5 perfect fifth
+ * 1.618 golden ratio
+ */
+$leading: 1.5;
+$font-size-ratio: 1.125;
+
+// custom
+$font-sizes: (
+  milli: (
+    size: 11px,
+    ratio: 1,
+  ),
+  centi: (
+    size: 12px,
+    ratio: 1.125,
+  ),
+  deci: (
+    size: 14px,
+    ratio: 1.125,
+  ),
+  base: (
+    size: 16px,
+    ratio: 1.125,
+  ),
+  deca: (
+    size: 19px,
+    ratio: 1.125,
+  ),
+  hecto: (
+    size: 24px,
+    ratio: 1.125,
+  ),
+  kilo: (
+    size: 32px,
+    ratio: 1.25,
+  ),
+  mega: (
+    size: 44px,
+    ratio: 1.333,
+  ),
+  giga: (
+    size: 62px,
+    ratio: 1.5,
+  ),
+  tera: (
+    size: 90px,
+    ratio: 1.618,
+  ),
+);
