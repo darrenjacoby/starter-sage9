@@ -1,56 +1,44 @@
-@each $bp in map-keys($breakpoints) {
-  $c: get-mq-class($bp);
+// using $fluid-ratio as default ratio
+.clear-0125 {
+  @include fluid(height, 0.125rem);
+}
 
-  @include mq($bp) {
-    // using $fluid-ratio default
-    .clear-0125#{$c} {
-      @include fluid(height, 0.125rem);
-    }
+.clear-025 {
+  @include fluid(height, 0.25rem);
+}
 
-    .clear-025#{$c} {
-      @include fluid(height, 0.25rem);
-    }
+.clear-050 {
+  @include fluid(height, 0.5rem);
+}
 
-    .clear-050#{$c} {
-      @include fluid(height, 0.5rem);
-    }
+.clear-075 {
+  @include fluid(height, 0.75rem);
+}
 
-    .clear-075#{$c} {
-      @include fluid(height, 0.75rem);
-    }
+.clear-1 {
+  @include fluid(height, 1rem);
+}
 
-    .clear-1#{$c} {
-      @include fluid(height, 1rem);
-    }
+.clear-2 {
+  @include fluid(height, 2rem);
+}
 
-    .clear-2#{$c} {
-      @include fluid(height, 2rem);
-    }
+.clear-3 {
+  @include fluid(height, 3rem);
+}
 
-    .clear-3#{$c} {
-      @include fluid(height, 3rem);
-    }
+.clear-4 {
+  @include fluid(height, 4rem);
+}
 
-    .clear-4#{$c} {
-      @include fluid(height, 4rem);
-    }
+.clear-6 {
+  @include fluid(height, 6rem);
+}
 
-    .clear-6#{$c} {
-      @include fluid(height, 6rem);
-    }
+.clear-8 {
+  @include fluid(height, 8rem);
+}
 
-    .clear-8#{$c} {
-      @include fluid(height, 8rem);
-    }
-
-    .clear-12#{$c} {
-      @include fluid(height, 12rem);
-    }
-
-    /*
-    .clear-custom {
-      @include fluid(height, 12rem, 2);
-    }
-    */
-  }
+.clear-12 {
+  @include fluid(height, 12rem);
 }
