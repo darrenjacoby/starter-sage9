@@ -1,9 +1,7 @@
 import Rellax from 'rellax';
 
-// el
 let el = '[data-rellax]';
 
-// config
 let config = {
   speed: -1,
   center: true,
@@ -13,6 +11,9 @@ let config = {
   horizontal: false,
 }
 
+/**
+ * Init
+ */
 function init() {
   // check for el
   if (!document.querySelector(el)) {

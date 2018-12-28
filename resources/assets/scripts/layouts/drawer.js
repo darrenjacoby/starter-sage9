@@ -1,10 +1,7 @@
 // yarn add lodash.throttle
 import throttle from 'lodash.throttle';
 
-// comp class
 let el = '.js-drawer';
-
-// anim class
 let state = 'drawer-open';
 
 /**

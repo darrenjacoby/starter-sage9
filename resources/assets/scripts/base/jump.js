@@ -1,7 +1,6 @@
 // yarn add jump.js
 import jump from 'jump.js'
 
-// el
 let el = '[data-jump]';
 
 let config = {
@@ -14,16 +13,11 @@ let config = {
   */
 }
 
-function instance(el) {
-  // get location
-  let loc = el.getAttribute('data-jump');
-  // event listener
-  if (loc) {
-    el.addEventListener('click', () => jump(loc, config));
-  }
-}
-
+/**
+ * Init
+ */
 function init() {
+  // check for el
   if (!document.querySelector(el)) {
     return;
   }
@@ -32,7 +26,14 @@ function init() {
   let els = document.querySelectorAll(el);
 
   // foreach
-  Array.from(els).map(el => instance(el));
+  Array.from(els).map((el) => {
+    // get location
+    let loc = el.getAttribute('data-jump');
+    // event listener
+    if (loc) {
+      el.addEventListener('click', () => jump(loc, config));
+    }
+  });
 }
 
 export default {

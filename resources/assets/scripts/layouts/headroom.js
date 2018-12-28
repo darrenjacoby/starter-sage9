@@ -1,7 +1,6 @@
 // yarn add headroom.js
 import Headroom from 'headroom.js';
 
-// comp class
 let el = '.js-headroom';
 
 // https://github.com/WickyNilliams/headroom.js#options
@@ -25,13 +24,18 @@ let config = {
   },
 };
 
+/**
+ * Init
+ */
 function init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
   }
 
+  // new headroom
   let headroom = new Headroom(document.querySelector(el), config);
+  // init
   headroom.init();
 }
 

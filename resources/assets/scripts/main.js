@@ -1,35 +1,34 @@
-// npm deps
+// Deps
 // yarn add when-dom-ready
 import whenDomReady from 'when-dom-ready';
 
-// base
-import anims from './base/anims';
+// Base
 import fontfaces from './base/fontfaces';
 import imgs from './base/imgs';
 import jump from './base/jump';
-import rellax from './base/rellax';
 
-// layouts
+// Blocks
+import anims from './blocks/anims';
+import rellax from './blocks/rellax';
+
+// Layouts
 import drawer from './layouts/drawer';
 import headroom from './layouts/headroom';
 
-// load
+/**
+ * Loaded DOM
+ */
 whenDomReady().then(() => {
-  // base
-  // animations
-  anims.init();
-  // font faces
+  // Base
   fontfaces.init();
-  // images
   imgs.init();
-  // jump
   jump.init();
-  // rellax
+
+  // Blocks
+  anims.init();
   rellax.init();
 
-  // layouts
-  // drawer
+  // Layouts
   drawer.init();
-  // headroom
   headroom.init();
 });

@@ -2,6 +2,9 @@
 // yarn add fontfaceobserver
 // import FontFaceObserver from 'fontfaceobserver';
 
+/**
+ * Init
+ */
 function init() {
   // let font = new FontFaceObserver('Montserrat');
 

@@ -1,10 +1,11 @@
 import intersectionObserver from '../utils/intersectionObserver';
 import imgLoaded from '../utils/imgLoaded';
 
-// el
 let el = '[data-src]';
 
-// start
+/**
+ * Init
+ */
 function init() {
   // check for el
   if (!document.querySelector(el)) {

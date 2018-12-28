@@ -1,9 +1,10 @@
 import intersectionObserver from '../utils/intersectionObserver';
 
-// el
 let el = '[data-anim]';
 
-// start
+/**
+ * Init
+ */
 function init() {
   // check for el
   if (!document.querySelector(el)) {
