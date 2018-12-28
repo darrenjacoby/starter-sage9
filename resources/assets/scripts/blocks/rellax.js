@@ -1,3 +1,4 @@
+// yarn add rellax
 import Rellax from 'rellax';
 
 let el = '[data-rellax]';
