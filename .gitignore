@@ -9,7 +9,6 @@
 !.package.json
 
 # App
-# Starter assets
 !app/
 !app/setup.php
 !app/gutenberg.php
