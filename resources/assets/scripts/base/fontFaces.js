@@ -11,9 +11,8 @@ function init() {
   font.load().then(() => {
     document.body.classList.add('fonts-loaded');
   }).catch(() => {
-    console.log('font failed to load');
+    // console.log('font failed to load');
   });
-
 }
 
 export default {
