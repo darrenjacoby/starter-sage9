@@ -1,6 +1,4 @@
 // https://alligator.io/js/intersection-observer/
-// yarn add intersection-observer
-// import 'intersection-observer';
 const defaults = {
   rootMargin: '0px',
   threshold: 0,
