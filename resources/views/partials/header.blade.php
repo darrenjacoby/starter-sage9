@@ -1,5 +1,4 @@
-{{-- default --}}
-<header class="banner">{{-- banner-norel --}}
+<header class="banner">
   @include('partials.banner')
 </header>
 
