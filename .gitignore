@@ -15,6 +15,7 @@
 !app/images.php
 !app/intervention.php
 !app/utils.php
+!app/polyfills.php
 
 # resources
 !resources/
