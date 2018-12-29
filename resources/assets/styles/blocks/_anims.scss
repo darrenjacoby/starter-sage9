@@ -8,3 +8,33 @@
  */
 
 // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+/*
+// used for banner ul.sub-menu
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+*/
+
+/*
+// used for banner ul.sub-menu
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(2rem);
+    opacity: 0;
+  }
+}
+*/

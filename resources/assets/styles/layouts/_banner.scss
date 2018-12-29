@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // flex-direction: row-reverse;
 }
 
 .banner-logo {
@@ -21,13 +20,70 @@
 }
 
 .banner-nav > li {
-  padding: 0 0.5rem;
+  position: relative;
 
-  &:first-of-type {
-    padding-left: 0;
+  &:not(:first-child) {
+    padding-left: 0.5rem;
   }
 
-  &:last-of-type {
-    padding-right: 0;
+  &:not(:last-child) {
+    padding-right: 0.5rem;
   }
 }
+
+/**
+ * Dropdown
+ *
+ * @requires layouts/banner.js
+ */
+
+/*
+.banner-nav ul {
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 100%;
+  z-index: 100;
+  will-change: transform;
+  // padding: 1rem;
+  // left: -1rem; // same as padding/margin
+  // background-color: hsl(0, 0%, 100%);
+}
+
+.banner-nav li.is-active ul {
+  visibility: visible;
+  display: block;
+  animation: slide-in-bottom get-duration(base) cubic-bezier(0.175, 0.885, 0.32, 1) both;
+}
+
+.banner-nav li.is-exiting ul {
+  animation: slide-out-bottom get-duration(fast) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+*/
+
+/*
+// add an icon to li.menu-item-has-children
+.banner-nav > li.menu-item-has-children > a {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    // background-image: url('../images/icon-down.svg');
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: contain;
+    // transition: transform get-duration(fast);
+    // will-change: transform;
+  }
+}
+
+.banner-nav > li.is-active > a {
+  &::after {
+    transform: rotate(-180deg);
+  }
+}
+*/

@@ -13,6 +13,7 @@
   background-color: hsl(0, 0, 100%);
   transition: transform get-duration(fast);
   z-index: 2000;
+  will-change: transform;
 }
 
 .drawer-open .drawer {
