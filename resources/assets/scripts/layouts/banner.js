@@ -49,8 +49,7 @@ function close(ul) {
   // https://medium.com/@DavideRama/removeeventlistener-and-anonymous-functions-ab9dbabd3e7b
   ul.addEventListener('animationend', function _listener() {
     // remove all anim classes
-    ul.classList.remove(anim.on);
-    ul.classList.remove(anim.off);
+    ul.classList.remove(anim.on, anim.off);
     // remove this listener
     ul.removeEventListener('animationend', _listener);
   });
