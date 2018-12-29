@@ -23,11 +23,11 @@ function close() {
 }
 
 /**
- * Event Handler
+ * Event Click
  *
  * @requires event
  */
-function eventHandler(event) {
+function eventClick(event) {
   event.preventDefault();
   toggle();
 }
@@ -52,10 +52,10 @@ function init() {
     return;
   }
 
-  // get toggles
-  let triggers = document.querySelectorAll(el);
+  // get toggle els
+  let els = document.querySelectorAll(el);
   // click
-  Array.from(triggers).map(el => el.addEventListener('click', event => eventHandler(event)));
+  Array.from(els).map(el => el.addEventListener('click', event => eventClick(event)));
   // esc
   document.addEventListener('keyup', event => eventEsc(event));
   // scroll
