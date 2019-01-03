@@ -1,4 +1,4 @@
-.rellax-bg {
+.rellax-mask {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,8 +8,8 @@
   align-items: center;
 }
 
-// image wrapped in rellax-bg
-.rellax-bg img[data-rellax] {
+// image wrapped in rellax-mask
+.rellax-mask img[data-rellax] {
   width: auto;
   min-width: 100%;
   height: auto;
@@ -18,7 +18,7 @@
 
 /*
 // data-src img blur in rellax-bg
-.rellax-bg .img-blur[data-rellax] {
+.rellax-mask .img-blur[data-rellax] {
   min-width: calc(100% + 20px);
 }
 */

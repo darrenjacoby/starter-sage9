@@ -32,12 +32,9 @@
 
     // flex-wrap
     // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4
-
-    /*
     .flex-wrap#{$c} {
       flex-wrap: wrap;
     }
-    */
 
     /*
     .flex-nowrap#{$c} {
@@ -99,25 +96,36 @@
 
     // align-content
     // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8
+
+    /*
     .align-content-start#{$c} {
       align-content: flex-start;
     }
+    */
 
+    /*
     .align-content-end#{$c} {
       align-content: flex-end;
     }
+    */
 
+    /*
     .align-content-center#{$c} {
       align-content: center;
     }
+    */
 
+    /*
     .align-content-between#{$c} {
       align-content: space-between;
     }
+    */
 
+    /*
     .align-content-around#{$c} {
       align-content: space-around;
     }
+    */
 
     /*
     .align-content-stretch#{$c} {
@@ -182,11 +190,11 @@
     */
 
     // requires $grid-cols, $grid-basis
-    @for $i from 0 through $grid-cols {
-      .flex-#{$i}#{$c} {
-        flex: #{$i};
-      }
-    }
+    // @for $i from 0 through $grid-cols {
+    //  .flex-#{$i}#{$c} {
+    //    flex: #{$i};
+    //  }
+    // }
 
     // grow
     // @for $i from 0 through $grid-cols {
@@ -204,12 +212,9 @@
 
     // basis
     // renamed to col for faster typing
-
-    /*
     .col-100vw#{$c} {
       flex-basis: 100vw;
     }
-    */
 
     /*
     .col-100vh#{$c} {
