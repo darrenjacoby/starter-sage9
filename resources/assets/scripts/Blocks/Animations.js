@@ -1,18 +1,18 @@
-import intersectionObserver from '../utils/intersectionObserver';
+import IntersectionObserver from '../Utils/IntersectionObserver';
 
 let el = '[data-anim]';
 
 /**
  * Init
  */
-function init() {
+function Init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
   }
 
   // observer
-  let instances = intersectionObserver(el, {
+  let instances = IntersectionObserver(el, {
     // once: true,
     // rootMargin: '0% 0% 0% 0%',
     // on enter
@@ -31,6 +31,4 @@ function init() {
   instances.observe();
 }
 
-export default {
-  init,
-};
+export default Init;

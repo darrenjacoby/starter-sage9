@@ -1,29 +1,29 @@
-import intersectionObserver from '../utils/intersectionObserver';
-import imgLoaded from '../utils/imgLoaded';
+import IntersectionObserver from '../Utils/IntersectionObserver';
+import ImageLoaded from '../Utils/ImageLoaded';
 
 let el = '[data-src]';
 
 /**
  * Init
  */
-function init() {
+function Init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
   }
 
   // observer
-  let instances = intersectionObserver(el, {
+  let instances = IntersectionObserver(el, {
     // only fire once
     once: true,
     // load image -50% in view
-    rootMargin: '-50% 0% 0% 0%',
+    rootMargin: '0% 0% 0% 0%',
     // on enter
     enter: (item) => {
       // get data-src
       let src = item.getAttribute('data-src');
       // wait until image has loaded
-      imgLoaded(src).then(() => {
+      ImageLoaded(src).then(() => {
         // change img srcset
         item.srcset = item.getAttribute('data-srcset');
         // add class loaded
@@ -37,6 +37,4 @@ function init() {
   instances.observe();
 }
 
-export default {
-  init,
-};
+export default Init;

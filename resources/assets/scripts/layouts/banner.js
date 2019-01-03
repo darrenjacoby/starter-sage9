@@ -1,5 +1,5 @@
 // yarn add lodash
-import throttle from 'lodash/throttle';
+import Throttle from 'lodash/throttle';
 
 // wp generated wp classes
 let el = '.menu-item-has-children > a';
@@ -21,7 +21,7 @@ let screen = 768;
  * 
  * @requires ul
  */
-function open(ul) {
+function Open(ul) {
   // run checks
   if (ul.classList.contains(anim.on)) {
     return;
@@ -36,7 +36,7 @@ function open(ul) {
  * 
  * @requires ul
  */
-function close(ul) {
+function Close(ul) {
   // run checks
   if (!ul.classList.contains(anim.on)) {
     return;
@@ -60,8 +60,8 @@ function close(ul) {
  * 
  * @requires els
  */
-function closeAll(els) {
-  Array.from(els).map(el => close(el.parentNode)); 
+function CloseAll(els) {
+  Array.from(els).map(el => Close(el.parentNode)); 
 }
 
 /**
@@ -69,15 +69,15 @@ function closeAll(els) {
  * 
  * @requires event
  */
-function eventClick(event) {
+function EventClick(event) {
   // disable link
   event.preventDefault();
 
   // close all other items that are open
-  closeAll();
+  CloseAll();
 
   // then open selected item
-  open(event.target.parentNode);
+  Open(event.target.parentNode);
 }
 
 /**
@@ -85,16 +85,16 @@ function eventClick(event) {
  * 
  * @requires event
  */
-function eventEsc(event) {
+function EventEsc(event) {
   if (event.keyCode === 27) {
-    closeAll();
+    CloseAll();
   }
 }
 
 /**
  * Init
  */
-function init() {
+function Init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
@@ -108,13 +108,11 @@ function init() {
   // get menu-item-has-children els
   els = document.querySelectorAll(el);
   // click
-  Array.from(els).map(el => el.addEventListener('click', event => eventClick(event)));
+  Array.from(els).map(el => el.addEventListener('click', event => EventClick(event)));
   // esc
-  document.addEventListener('keyup', event => eventEsc(event));
+  document.addEventListener('keyup', event => EventEsc(event));
   // scroll
-  window.addEventListener('scroll', throttle(() => closeAll(), 400));
+  window.addEventListener('scroll', Throttle(() => CloseAll(), 400));
 }
 
-export default {
-  init,
-}
+export default Init;

@@ -1,5 +1,5 @@
 // yarn add jump.js
-import jump from 'jump.js'
+import Jump from 'jump.js'
 
 let el = '[data-jump]';
 
@@ -16,7 +16,7 @@ let config = {
 /**
  * Init
  */
-function init() {
+function Init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
@@ -31,11 +31,9 @@ function init() {
     let loc = el.getAttribute('data-jump');
     // event listener
     if (loc) {
-      el.addEventListener('click', () => jump(loc, config));
+      el.addEventListener('click', () => Jump(loc, config));
     }
   });
 }
 
-export default {
-  init,
-};
+export default Init;

@@ -5,7 +5,7 @@ import FontFaceObserver from 'fontfaceobserver';
 /**
  * Init
  */
-function init() {
+function Init() {
   let font = new FontFaceObserver('__FONT__');
 
   font.load().then(() => {
@@ -15,6 +15,4 @@ function init() {
   });
 }
 
-export default {
-  init,
-};
+export default Init;
