@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 /**
  * Get Svg
  * 
@@ -11,7 +13,7 @@ function get_svg($src)
     $path = get_theme_file_path();
 
     // get hashed file
-    $file = App\sage('assets')->get($src);
+    $file = sage('assets')->get($src);
 
     // include
     include "{$path}/dist/{$file}";
