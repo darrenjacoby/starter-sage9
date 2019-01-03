@@ -12,7 +12,8 @@ class Gallery
      * @param $raw[]
      * @return [$ID, $title, $content, $link, $image]
      */
-    public static function get($raw) {
+    public static function get($raw) 
+    {
         // map array and sanitise data
         return array_map(function ($attachment) {
             // collection

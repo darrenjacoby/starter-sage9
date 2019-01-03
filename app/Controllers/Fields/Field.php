@@ -12,7 +12,8 @@ class Field
      * @param $raw[], $return[]
      * @return [...]
      */
-    public static function map($raw, $return) {
+    public static function map($raw, $return) 
+    {
         // make sure $raw is an arr
         if (!is_array($raw)) {
             $raw = [$raw];
