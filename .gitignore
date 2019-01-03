@@ -17,6 +17,10 @@
 !app/utils.php
 !app/polyfills.php
 
+# app/Controllers/
+!app/Controllers/
+!app/Controllers/**/**
+
 # resources
 !resources/
 
