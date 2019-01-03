@@ -22,7 +22,7 @@
           <a href="{{ $item->link }}">
             @if ($item->link)
               <div class="img-mask {{ $__config->ratio or 'ratio-1-1' }}">
-                <img {{ image($item->image, 'large') }}>
+                <img {{ App\image($item->image, 'large') }}>
               </div>
             @endif
           </a>

@@ -12,6 +12,7 @@ import Animations from './Blocks/Animations';
 import Parallax from './Blocks/Parallax';
 
 // Comps
+import Carousel from './Comps/Carousel';
 
 // Layouts
 // import Banner from './Layouts/Banner';
@@ -32,6 +33,7 @@ LoadedDom().then(() => {
   Parallax();
 
   // Comps
+  Carousel();
 
   // Layouts
   // Banner();

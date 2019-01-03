@@ -18,7 +18,7 @@
             <div class="rellax-mask">
               <img 
                 data-rellax 
-                {{ image($item->image, '66vw', 1000) }}>
+                {{ App\image($item->image, '66vw', 1000) }}>
             </div>
           </div>
         @endif

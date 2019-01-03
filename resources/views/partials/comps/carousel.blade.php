@@ -17,7 +17,7 @@
       <div class="ratio-2-1 img-mask">
         <img 
           class="tns-lazy-img" 
-          {{ image($item->image, '100vw') }}>
+          {{ App\image($item->image, '100vw') }}>
 
         <div class="pseudo-cover flex align-items-end justify-content-start">{{-- container --}}
           <div class="carousel-contain">
