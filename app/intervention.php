@@ -22,6 +22,8 @@ intervention('remove-help-tabs');
 intervention('remove-howdy');
 intervention('remove-menu-items');
 intervention('remove-post-components');
+intervention('remove-post-components', 'editor');
+intervention('remove-page-components', 'editor');
 intervention('remove-taxonomies', ['tag']);
 intervention('remove-toolbar-frontend');
 intervention('remove-toolbar-items');
