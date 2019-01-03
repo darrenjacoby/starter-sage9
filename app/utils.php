@@ -1,7 +1,8 @@
 <?php
 
 /**
- * get_svg
+ * Get Svg
+ * 
  * @param $src
  */
 function get_svg($src)
@@ -17,7 +18,8 @@ function get_svg($src)
 }
 
 /**
- * get_image_src
+ * Get Image Src
+ * 
  * @param $id, $size
  */
 function get_image_src($id, $size = 'thumbnail')
@@ -26,7 +28,8 @@ function get_image_src($id, $size = 'thumbnail')
 }
 
 /**
- * get_image_srcset
+ * Get Image Srcset
+ * 
  * @param $id, $size
  */
 function get_image_srcset($id, $size = 'thumbnail')
@@ -35,7 +38,8 @@ function get_image_srcset($id, $size = 'thumbnail')
 }
 
 /**
- * get_featured_image_id
+ * Get Featured Image ID
+ * 
  * @param $id, $size
  */
 function get_featured_image_id($id, $size = 'thumbnail')
@@ -48,7 +52,8 @@ function get_featured_image_id($id, $size = 'thumbnail')
 }
 
 /**
- * image
+ * Image
+ * 
  * @param $id, $size, $max_size
  */
 function image($id, $size = 'thumbnail', $max_size = false)

@@ -7,7 +7,6 @@ namespace App;
  *
  * @link https://developer.wordpress.org/reference/functions/add_image_size/
  */
-
 // low quality img for placeholders
 add_image_size('placeholder', 100, 9999);
 
