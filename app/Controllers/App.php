@@ -32,8 +32,4 @@ class App extends Controller
         }
         return get_the_title();
     }
-
-    public function data() {
-        return 'testing';
-    }
 }
