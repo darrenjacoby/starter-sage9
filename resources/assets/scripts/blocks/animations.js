@@ -1,4 +1,4 @@
-import intersectionObserver from '../_utils/IntersectionObserver';
+import intersectionObserver from '../_utils/intersectionObserver';
 
 let el = '[data-anim]';
 
