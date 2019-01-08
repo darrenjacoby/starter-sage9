@@ -1,40 +1,40 @@
 // Deps
 // yarn add when-dom-ready
-import LoadedDom from 'when-dom-ready';
+import loadedDom from 'when-dom-ready';
 
 // Base
-// import FontFaces from './Base/FontFaces';
-import Images from './Base/Images';
-import Links from './Base/Links';
+// import fontFaces from './base/fontFaces';
+import images from './base/images';
+import links from './base/links';
 
 // Blocks
-import Animations from './Blocks/Animations';
-import Parallax from './Blocks/Parallax';
+import animations from './blocks/animations';
+import parallax from './blocks/parallax';
 
 // Comps
 
 // Layouts
-// import Banner from './Layouts/Banner';
-import Drawer from './Layouts/Drawer';
-import Headroom from './Layouts/Headroom';
+// import banner from './layouts/banner';
+import drawer from './layouts/drawer';
+import headroom from './layouts/headroom';
 
 /**
  * Loaded DOM
  */
-LoadedDom().then(() => {
+loadedDom().then(() => {
   // Base
-  // FontFaces();
-  Images();
-  Links();
+  // fontFaces();
+  images();
+  links();
 
   // Blocks
-  Animations();
-  Parallax();
+  animations();
+  parallax();
 
   // Comps
 
   // Layouts
-  // Banner();
-  Drawer();
-  Headroom();
+  // banner();
+  drawer();
+  headroom();
 });
