@@ -12,7 +12,7 @@ import animations from './blocks/animations';
 import parallax from './blocks/parallax';
 
 // Comps
-import carousel from './Comps/carousel';
+import carousel from './comps/carousel';
 
 // Layouts
 // import banner from './layouts/banner';
