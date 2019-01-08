@@ -27,7 +27,7 @@ let config = {
 /**
  * Init
  */
-function Init() {
+function init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
@@ -39,4 +39,4 @@ function Init() {
   headroom.init();
 }
 
-export default Init;
+export default init;

@@ -15,7 +15,7 @@ let config = {
 /**
  * Init
  */
-function Init() {
+function init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
@@ -25,4 +25,4 @@ function Init() {
   let rellax = new Rellax(el, config);
 }
 
-export default Init;
+export default init;

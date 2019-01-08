@@ -1,5 +1,5 @@
 // yarn add lodash
-import Throttle from 'lodash/throttle';
+import throttle from 'lodash/throttle';
 
 let el = '.js-drawer';
 let state = 'drawer-open';
@@ -7,19 +7,19 @@ let state = 'drawer-open';
 /**
  * Toggle
  */
-function Toggle() {
+function toggle() {
   document.body.classList.toggle(state);
 }
 
 /**
  * Close
  */
-function Close() {
+function close() {
   if (!document.body.classList.contains(state)) {
     return;
   }
 
-  Toggle();
+  toggle();
 }
 
 /**
@@ -27,9 +27,9 @@ function Close() {
  *
  * @requires event
  */
-function EventClick(event) {
+function eventClick(event) {
   event.preventDefault();
-  Toggle();
+  toggle();
 }
 
 /**
@@ -37,16 +37,16 @@ function EventClick(event) {
  * 
  * @requires event
  */
-function EventEsc(event) {
+function eventEsc(event) {
   if (event.keyCode === 27) {
-    Close();
+    close();
   }
 }
 
 /**
  * Init
  */
-function Init() {
+function init() {
   // check for el
   if (!document.querySelector(el)) {
     return;
@@ -55,11 +55,11 @@ function Init() {
   // get toggle els
   let els = document.querySelectorAll(el);
   // click
-  Array.from(els).map(el => el.addEventListener('click', event => EventClick(event)));
+  Array.from(els).map(el => el.addEventListener('click', event => eventClick(event)));
   // esc
-  document.addEventListener('keyup', event => EventEsc(event));
+  document.addEventListener('keyup', event => eventEsc(event));
   // scroll
-  window.addEventListener('scroll', Throttle(() => Close(), 400));
+  window.addEventListener('scroll', throttle(() => close(), 400));
 }
 
-export default Init;
+export default init;
