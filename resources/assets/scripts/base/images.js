@@ -1,5 +1,5 @@
-import intersectionObserver from '../_utils/IntersectionObserver';
-import imageLoaded from '../_utils/ImageLoaded';
+import intersectionObserver from '../_utils/intersectionObserver';
+import imageLoaded from '../_utils/imageLoaded';
 
 let el = '[data-src]';
 
