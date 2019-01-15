@@ -1,21 +1,22 @@
 // yarn add tiny-slider
-import { tns as Tns } from 'tiny-slider/src/tiny-slider.module'
+import { tns } from 'tiny-slider/src/tiny-slider.module'
 
 let el = '.js-tns';
 
-let config = {
+// https://github.com/ganlanyuan/tiny-slider#options
+let defaults = {
   items: 1,
   loop: false,
-  nav: true,
+  nav: false,
   lazyload: true,
   speed: 200,
-  // mode: 'gallery',
+  mode: 'gallery',
   arrowKeys: true,
-  controls: false,
+  controls: true,
   responsive: {
     992: {
-      nav: false,
-      controls: true,
+      // nav: false,
+      // controls: true,
     },
   },
 };
@@ -31,7 +32,9 @@ function init() {
 
   // run tns
   Array.from(els).map((container) => {
-    Tns({ ...config, container });
+    let config = JSON.parse(container.dataset.json);
+    // console.log(container.dataset);
+    tns({ ...defaults, ...config, container });
   });
 }
 

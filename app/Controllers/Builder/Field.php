@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Fields;
+namespace App\Controllers\Builder;
 
 class Field
 {

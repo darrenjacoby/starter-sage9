@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Fields\Presets;
+namespace App\Controllers\Builder\Fields;
 
 class Gallery
 {

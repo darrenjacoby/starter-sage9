@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers\Fields\Presets;
+namespace App\Controllers\Builder\Fields;
 
-class Taxonomy
+class Relationship
 {
     /**
-     * Field Preset Taxonomy
+     * Field Preset Relationship
      * 
      * Sanitise $raw data
      * 
@@ -15,20 +15,20 @@ class Taxonomy
     public static function get($raw) 
     {
         // map array and sanitise data
-        return array_map(function ($term) {
+        return array_map(function ($post) {
             // collection
             $data = (object) null;
 
             // $ID
-            $data->ID = $term->term_id;
+            $data->ID = $post->ID;
             // $title
-            $data->title = $term->name;
+            $data->title = $post->post_title;
             // $content
-            $data->content = $term->description;
+            $data->content = $post->excerpt;
             // image
-            $data->image = get_field('term_image', 'term_' . $term->term_id);
+            $data->image = get_post_thumbnail_id($post->ID);
             // $link
-            $data->link = get_term_link($term->term_id);
+            $data->link = get_the_permalink($post->ID);
 
             // return
             return $data;

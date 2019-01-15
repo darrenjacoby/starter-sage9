@@ -8,10 +8,10 @@
     $link
 --}}
 
-{{--
-<div class="container-esc">
---}}
-<div class="carousel tns js-tns">
+<div 
+  class="carousel tns js-tns" 
+  data-js=@json($__config)>
+
   @foreach ($__fields as $item)
     <div class="carousel-item">
       <div class="ratio-2-1 img-mask">
@@ -19,7 +19,7 @@
           class="tns-lazy-img" 
           {{ App\image($item->image, '100vw') }}>
 
-        <div class="pseudo-cover flex align-items-end justify-content-start">{{-- container --}}
+        <div class="pseudo-cover flex align-items-end justify-content-start">
           <div class="carousel-contain">
             @if ($item->title)
               <div class="carousel-title">
@@ -44,6 +44,3 @@
     </div>
   @endforeach
 </div>
-{{--
-</div>
---}}
