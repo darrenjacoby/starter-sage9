@@ -61,10 +61,11 @@ function get_featured_image_id($id, $size = 'thumbnail')
 function image($id, $size = 'thumbnail', $max_size = false)
 {
     $src = wp_get_attachment_image_url($id, 'placeholder');
+    $alt = get_post_meta($id, '_wp_attachment_image_alt', true);
     $data_src = wp_get_attachment_image_url($id, $size);
     $data_srcset = wp_get_attachment_image_srcset($id, $size);
 
-    echo "src=\"{$src}\" data-src=\"{$data_src}\" data-srcset=\"{$data_srcset}\"";
+    echo "src=\"{$src}\" alt=\"{$alt}\" data-src=\"{$data_src}\" data-srcset=\"{$data_srcset}\"";
 
     if ($max_size) {
         echo "sizes=\"(max-width: {$max_size}px) 100vw, {$max_size}px\"";
