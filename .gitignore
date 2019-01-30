@@ -11,7 +11,7 @@
 # app
 !app/
 !app/setup.php
-!app/gutenberg.php
+!app/enqueues.php
 !app/images.php
 !app/intervention.php
 !app/utils.php
@@ -20,6 +20,10 @@
 # app/Controllers/
 !app/Controllers/
 !app/Controllers/**/**
+
+# app/Transform/
+!app/Transform/
+!app/Transform/**/**
 
 # resources
 !resources/
