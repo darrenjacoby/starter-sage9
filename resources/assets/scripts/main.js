@@ -1,11 +1,11 @@
 // Base
-// import fontFaces from './base/fontFaces';
 import images from './base/images';
-import links from './base/links';
+// import fontFaces from './base/fontFaces';
+// import links from './base/links';
 
 // Blocks
-import animations from './blocks/animations';
-import parallax from './blocks/parallax';
+// import anims from './blocks/anims';
+// import rellax from './blocks/parallax';
 
 // Comps
 import carousel from './comps/carousel';
@@ -16,21 +16,21 @@ import map from './comps/map';
 
 // Layouts
 // import banner from './layouts/banner';
-import drawer from './layouts/drawer';
-import headroom from './layouts/headroom';
+// import drawer from './layouts/drawer';
+// import headroom from './layouts/headroom';
 
 /**
  * DOM Loaded
  */
 document.addEventListener('DOMContentLoaded', () => {
   // Base
-  // fontFaces();
   images();
-  links();
+  // fontFaces();
+  // links();
 
   // Blocks
-  animations();
-  parallax();
+  // anims();
+  // rellax();
 
   // Comps
   carousel();
@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Layouts
   // banner();
-  drawer();
-  headroom();
+  // drawer();
+  // headroom();
 });

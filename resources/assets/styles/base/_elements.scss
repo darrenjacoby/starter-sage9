@@ -4,17 +4,25 @@
  * @recommended
  * article, aside, details, figcaption, figure, footer, header, hgroup, main, mark, menu, nav, section, summary, time
  */
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
 html {
   font-size: 100%;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
+  overflow-x: hidden; // req for container-esc
 }
 
 body {
   line-height: $leading;
   font-size: 16px;
   font-family: System, sans-serif;
-  overflow-x: hidden; // req for container-esc
 
   /*
   -webkit-font-smoothing: antialiased;
@@ -22,12 +30,8 @@ body {
   */
 }
 
-* {
-  &,
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
+figure {
+  margin: 0;
 }
 
 figure {
