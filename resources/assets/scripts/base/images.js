@@ -22,10 +22,16 @@ function init() {
     enter: (item) => {
       // get data-src
       let src = item.getAttribute('data-src');
-      // wait until image has loaded
+      // get data-srcset
+      let srcset = item.getAttribute('data-srcset');
+      // wait until image data-src has loaded
       imageLoaded(src).then(() => {
+        // change img src
+        item.src = src;
         // change img srcset
-        item.srcset = item.getAttribute('data-srcset');
+        if (srcset) {
+          item.srcset = srcset;
+        }
         // add class loaded
         item.classList.add('loaded');
       });
