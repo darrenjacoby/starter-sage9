@@ -197,6 +197,10 @@
     // }
 
     // grow
+    .grow-1 {
+      flex-grow: 1;
+    }
+
     // @for $i from 0 through $grid-cols {
     //  .grow-#{$i}#{$c} {
     //    flex-grow: #{$i};
@@ -214,11 +218,13 @@
     // renamed to col for faster typing
     .col-100vw#{$c} {
       flex-basis: 100vw;
+      // width: 100vw;
     }
 
     /*
     .col-100vh#{$c} {
       flex-basis: 100vh;
+      // width: 100vh;
     }
     */
 
@@ -227,6 +233,7 @@
       .col-#{$i}#{$c} {
         position: relative;
         flex-basis: percentage($i/$grid-cols);
+        // width: percentage($i/$grid-cols);
       }
     }
 
@@ -234,6 +241,7 @@
     .col-auto#{$c} {
       position: relative;
       flex-basis: auto;
+      // width: auto;
     }
 
     // row

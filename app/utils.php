@@ -40,6 +40,16 @@ function get_image_srcset($id, $size = 'thumbnail')
 }
 
 /**
+ * Get Image Srcset
+ * 
+ * @param $id, $size
+ */
+function get_image_alt($id)
+{
+    return get_post_meta($id, '_wp_attachment_image_alt', true);
+}
+
+/**
  * Get Featured Image ID
  * 
  * @param $id, $size
@@ -59,11 +69,15 @@ function get_featured_image_id($id, $size = 'thumbnail')
  * @param $id, $size, $max_size
  */
 function image($id, $size = 'thumbnail', $max_size = false)
-{
-    $src = wp_get_attachment_image_url($id, 'placeholder');
-    $alt = get_post_meta($id, '_wp_attachment_image_alt', true);
-    $data_src = wp_get_attachment_image_url($id, $size);
-    $data_srcset = wp_get_attachment_image_srcset($id, $size);
+{   
+    // src
+    $src = get_image_src($id, 'placeholder');
+    // alt tag
+    $alt = get_image_alt($id);
+    // data-src
+    $data_src = get_image_src($id, $size);
+    // data-srcset
+    $data_srcset = get_image_src($id, $size);
 
     echo "src=\"{$src}\" alt=\"{$alt}\" data-src=\"{$data_src}\" data-srcset=\"{$data_srcset}\"";
 
