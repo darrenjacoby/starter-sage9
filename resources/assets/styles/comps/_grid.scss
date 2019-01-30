@@ -1,0 +1,26 @@
+.grid-item {
+  position: relative;
+  margin-bottom: $grid-gutter;
+}
+
+.grid-item img {
+  min-width: 100%;
+}
+
+.grid-item-in {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $grid-gutter;
+  background-color: hsla(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: opacity get-duration(fast);
+
+  &:active,
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}

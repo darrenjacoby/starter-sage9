@@ -1,6 +1,6 @@
 {{--
   
-  Grid
+  Grid Muuri
 
   @include('partials.comps.grid', [
     'props' => App\Builder\Data::get($acf-field, [
@@ -12,7 +12,7 @@
   ]);
 --}}
 
-<div class="grid row">
+<div class="grid-muuri js-muuri row">
   @foreach ($props as $item)
     <div class="col-12 col-4:md">{{-- col --}}
       <article class="grid-item">
@@ -21,7 +21,7 @@
         @if ($item->image)
           <a href="{{ $item->link }}">
             @if ($item->link)
-              <figure class="img-mask ratio-1-1">{{-- img ratio --}}
+              <figure>
                 <img {{ App\image($item->image, 'large', 600) }}>{{-- img size/max-w --}}
               </figure>
             @endif
@@ -32,7 +32,7 @@
         <header class="grid-item-main {{-- grid-item-in --}}">
           @if ($item->title)
             <div class="grid-item-title">
-              {!! $item->title !!}
+              {{ $item->title }}
             </div>
           @endif
           @if ($item->editor)
@@ -44,4 +44,4 @@
       </article>
     </div>{{-- /.col-x --}}
   @endforeach
-</div>{{-- /.grid --}}
+</div>{{-- /.grid-muuri --}}

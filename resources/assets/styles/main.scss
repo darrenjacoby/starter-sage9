@@ -20,6 +20,8 @@
 @import "blocks/display";
 @import "blocks/flex";
 @import "blocks/img";
+@import "blocks/maxw";
+@import "blocks/minh";
 @import "blocks/ratio";
 @import "blocks/rellax";
 @import "blocks/text";
@@ -27,6 +29,12 @@
 
 // Comps
 @import "comps/carousel";
+@import "comps/grid";
+@import "comps/grid-bricks";
+@import "comps/grid-muuri";
+@import "comps/hero";
+@import "comps/lightbox";
+@import "comps/map";
 @import "comps/wp-classes";
 
 // Layouts

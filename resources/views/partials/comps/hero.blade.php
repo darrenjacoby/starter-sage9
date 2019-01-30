@@ -1,50 +1,61 @@
 {{--
-  Comp: Hero
 
-  Fields:
-    $title
-    $content
-    $image
-    $link
+  Hero
+
+  @include('partials.comps.hero', [
+    'props' => App\Builder\Data::get($acf-field, [
+      'title' => '',
+      'editor' => '',
+      'image' => '',
+      'link' => '',
+    ]),
+  ]);
 --}}
 
-@foreach ($__fields as $item)
-  <div class="container-esc-l">
-    <div class="flex flex-wrap justify-content-between align-items-center">
-      {{-- image --}}
-      <div class="col-12 col-7:md col-8:lg">
+<div class="hero container-esc">
+  @foreach ($props as $item)
+    {{-- for min height, remove class comments below --}}
+    <article class="hero-item {{-- ratio-2-1 --}} {{-- minh-100vh --}}">
+      <div class="flex {{-- align-items-center --}} {{-- pseudo-cover --}}">
+
+        {{-- img --}}
         @if ($item->image)
-          <div class="img-mask ratio-2-1">
+          <figure class="img-mask pseudo-cover">
             <div class="rellax-mask">
               <img 
                 data-rellax 
-                {{ App\image($item->image, '66vw', 1000) }}>
+                {{ App\image($item->image, '100vw', 1800) }}>{{-- img size/max-w --}}
             </div>
-          </div>
+          </figure>
         @endif
-      </div>
 
-      <div class="col-12 col-5:md col-3:lg">
-        <div class="hero-main">
-          @if ($item->title)
-            <div class="hero-title">
-              {!! $item->title !!}
-            </div>
-          @endif
+        {{-- meta --}}
+        <div class="container">
+          <div class="row {{-- justify-content-center --}}">
+            <div class="col-12 col-6:md">{{-- col --}}
+              <header class="hero-main">
+                @if ($item->title)
+                  <div class="hero-title">
+                    {!! $item->title !!}
+                  </div>
+                @endif
 
-          @if ($item->content)
-            <div class="hero-content">
-              {!! $item->content !!}
-            </div>
-          @endif
+                @if ($item->editor)
+                  <div class="hero-editor">
+                    {!! $item->editor !!}
+                  </div>
+                @endif
 
-          @if ($item->link)
-            <div class="carousel-link">
-              <a href="{{ $item->link }}">&xrarr;</a>
-            </div>
-          @endif
-        </div>
-      </div>
-    </div>
-  </div>
-@endforeach
+                @if ($item->link)
+                  <div class="hero-link">
+                    <a href="{{ $item->link }}">&xrarr;</a>
+                  </div>
+                @endif
+              </header>
+            </div>{{-- /.col-x --}}
+          </div>{{-- /.row --}}
+        </div>{{-- /.container --}}
+      </div>{{-- /.flex --}}
+    </article>
+  @endforeach
+</div>{{-- /.hero --}}

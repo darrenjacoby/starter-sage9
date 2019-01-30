@@ -1,0 +1,22 @@
+.grid-muuri {
+  position: relative;
+  overflow: hidden;
+}
+
+// muuri js classes
+.muuri-item {
+  position: absolute;
+  z-index: 1;
+}
+
+.muuri-item-hidden {
+  z-index: 0;
+}
+
+.muuri-item-releasing {
+  z-index: 2;
+}
+
+.muuri-item-dragging {
+  z-index: 3;
+}

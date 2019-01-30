@@ -1,3 +1,0 @@
-{{--
-  Builder: Google Map
---}}

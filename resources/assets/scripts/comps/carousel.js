@@ -5,20 +5,27 @@ let el = '.js-tns';
 
 // https://github.com/ganlanyuan/tiny-slider#options
 let defaults = {
-  items: 1,
+  // layout
+  items: 1, 
+  gutter: 0,
+  edgePadding: 0,
+
+  // playback
+  mode: 'carousel', // gallery for fade
+  speed: 400,
+  autoplay: false,
   loop: false,
-  nav: false,
-  lazyload: true,
-  speed: 200,
-  mode: 'gallery',
-  arrowKeys: true,
+  rewind: false,
+  axis: 'horizontal',
+
+  // interaction
   controls: true,
-  responsive: {
-    992: {
-      // nav: false,
-      // controls: true,
-    },
-  },
+  nav: true,
+  touch: true,
+  arrowKeys: true,
+
+  // perf
+  lazyload: true,
 };
 
 function init() {
@@ -33,7 +40,6 @@ function init() {
   // run tns
   Array.from(els).map((container) => {
     let config = JSON.parse(container.dataset.json);
-    // console.log(container.dataset);
     tns({ ...defaults, ...config, container });
   });
 }

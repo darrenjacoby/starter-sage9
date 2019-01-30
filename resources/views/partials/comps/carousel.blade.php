@@ -1,46 +1,74 @@
 {{--
-  Comp: Carousel
 
-  Fields:
-    $title
-    $content
-    $image
-    $link
+  Carousel
+
+  @include('partials.comps.carousel', [
+    'props' => App\Builder\Data::get($acf-field, [
+      'title' => '',
+      'editor' => '',
+      'image' => '',
+      'link' => '',
+    ]),
+
+    // https://github.com/ganlanyuan/tiny-slider#options
+    'config' => [
+      // layout
+      'items' => 1, 
+      'gutter' => 0,
+      'edgePadding' => 0,
+      // playback
+      'mode' => 'carousel', // gallery for fade
+      'speed' => 400,
+      'autoplay' => false,
+      'loop' => false,
+      'rewind' => false,
+      'axis' => 'horizontal',
+      // interaction
+      'controls' => true,
+      'nav' => true,
+      'touch' => true,
+      'arrowKeys' => true,
+      // perf
+      'lazyload' => true,
+    ])
+  ]);
 --}}
 
-<div 
-  class="carousel tns js-tns" 
-  data-js=@json($__config)>
+<div class="carousel {{-- container-esc --}}">
+  <div 
+    class="js-tns" 
+    data-json=@json($config)>
+    @foreach ($props as $item)
+      <article class="carousel-item">
+        {{-- img --}}
+        <div class="img-mask ratio-2-1">{{-- img ratio --}}
+          <img 
+            class="tns-lazy-img" 
+            {{ App\image($item->image, '100vw', 1800) }}>{{-- img size/max-w --}}
+        </div>
 
-  @foreach ($__fields as $item)
-    <div class="carousel-item">
-      <div class="ratio-2-1 img-mask">
-        <img 
-          class="tns-lazy-img" 
-          {{ App\image($item->image, '100vw') }}>
-
-        <div class="pseudo-cover flex align-items-end justify-content-start">
-          <div class="carousel-contain">
+        {{-- meta --}}
+        {{-- remove class below to move header below img --}}
+        <div class="pseudo-cover flex align-items-end justify-content-left">
+          <header class="carousel-item-main">
             @if ($item->title)
-              <div class="carousel-title">
+              <div class="carousel-item-title">
                 {!! $item->title !!}
               </div>
             @endif
-
-            @if ($item->content)
-              <div class="carousel-content">
-                {!! $item->content !!}
+            @if ($item->editor)
+              <div class="carousel-item-content">
+                {!! $item->editor !!}
               </div>
             @endif
-
             @if ($item->link)
-              <div class="carousel-link">
+              <div class="carousel-item-link">
                 <a href="{{ $item->link }}">&xrarr;</a>
               </div>
             @endif
-          </div>
-        </div>
-      </div>
-    </div>
-  @endforeach
-</div>
+          </header>
+        </div>{{-- /.pseudo-cover --}}
+      </article>
+    @endforeach
+  </div>{{-- /.tns --}}
+</div>{{-- /.carousel --}}

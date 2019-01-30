@@ -1,7 +1,3 @@
-// Deps
-// yarn add when-dom-ready
-import loadedDom from 'when-dom-ready';
-
 // Base
 // import fontFaces from './base/fontFaces';
 import images from './base/images';
@@ -13,6 +9,10 @@ import parallax from './blocks/parallax';
 
 // Comps
 import carousel from './comps/carousel';
+import gridMuuri from './comps/gridMuuri';
+import instagram from './comps/instagram';
+import lightbox from './comps/lightbox';
+import map from './comps/map';
 
 // Layouts
 // import banner from './layouts/banner';
@@ -20,9 +20,9 @@ import drawer from './layouts/drawer';
 import headroom from './layouts/headroom';
 
 /**
- * Loaded DOM
+ * DOM Loaded
  */
-loadedDom().then(() => {
+document.addEventListener('DOMContentLoaded', () => {
   // Base
   // fontFaces();
   images();
@@ -34,6 +34,10 @@ loadedDom().then(() => {
 
   // Comps
   carousel();
+  gridMuuri();
+  instagram();
+  lightbox();
+  map();
 
   // Layouts
   // banner();

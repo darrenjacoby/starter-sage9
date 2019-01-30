@@ -16,5 +16,11 @@
     {{-- builder --}}
   @endwhile
 
+  {{--
+  @include('partials.comps.grid-bricks', [
+    'props' => App\Builder\Presets\Query::get(),
+  ])
+  --}}
+
   {!! get_the_posts_navigation() !!}
 @endsection
