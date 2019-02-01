@@ -7,64 +7,58 @@ namespace App;
  *
  * @link https://developer.wordpress.org/reference/functions/add_image_size/
  */
-// low quality img for placeholders
-add_image_size('placeholder', 100, 9999);
+// vw
+$vw = [
+    ['placeholder', 100],
+    ['100vw', 1800],
+    ['100vw@2x', 3600],
+    ['66vw', 1200],
+    ['66vw@2x', 2400],
+];
 
-// vw sizes
-add_image_size('100vw', 1800, 9999);
-add_image_size('100vw@2x', 3600, 9999);
+// 1200/xl
+$xl = [
+    ['3/12', 300],
+    ['3/12@2x', 600],
+    ['4/12', 400],
+    ['4/12@2x', 800],
+    ['6/12', 600],
+    ['6/12@2x', 1200],
+    ['9/12', 800],
+    ['9/12@2x', 1600],
+    ['12/12', 1200],
+    ['12/12@2x', 2400],
+];
 
-add_image_size('66vw', 1200, 9999);
-add_image_size('66vw@2x', 2400, 9999);
+// 1400/xx
+$xx = [
+    ['3/12', 350],
+    ['3/12@2x', 700],
+    ['4/12', 460],
+    ['4/12@2x', 920],
+    ['6/12', 700],
+    ['6/12@2x', 1400],
+    ['9/12', 1050],
+    ['9/12@2x', 2100],
+    ['12/12', 1400],
+    ['12/12@2x', 2800],
+];
 
-// based on 1400px (xx) container
-add_image_size('3/12', 350, 9999);
-add_image_size('3/12@2x', 700, 9999);
+// 1600/xx
+$xxx = [
+    ['3/12', 400],
+    ['3/12@2x', 800],
+    ['4/12', 600],
+    ['4/12@2x', 1200],
+    ['6/12', 800],
+    ['6/12@2x', 1600],
+    ['9/12', 1200],
+    ['9/12@2x', 2400],
+    ['12/12', 1600],
+    ['12/12@2x', 3200],
+];
 
-add_image_size('4/12', 460, 9999);
-add_image_size('4/12@2x', 920, 9999);
-
-add_image_size('6/12', 700, 9999);
-add_image_size('6/12@2x', 1400, 9999);
-
-add_image_size('9/12', 1050, 9999);
-add_image_size('9/12@2x', 2100, 9999);
-
-add_image_size('12/12', 1400, 9999);
-add_image_size('12/12@2x', 2800, 9999);
-
-// based on 1600px (xxx) container
-/*
-add_image_size('3/12', 400, 9999);
-add_image_size('3/12@2x', 800, 9999);
-
-add_image_size('4/12', 600, 9999);
-add_image_size('4/12@2x', 1200, 9999);
-
-add_image_size('6/12', 800, 9999);
-add_image_size('6/12@2x', 1600, 9999);
-
-add_image_size('9/12', 1200, 9999);
-add_image_size('9/12@2x', 2400, 9999);
-
-add_image_size('12/12', 1600, 9999);
-add_image_size('12/12@2x', 3200, 9999);
-*/
-
-// based on 1200px (xl) container
-/*
-add_image_size('3/12', 300, 9999);
-add_image_size('3/12@2x', 600, 9999);
-
-add_image_size('4/12', 400, 9999);
-add_image_size('4/12@2x', 800, 9999);
-
-add_image_size('6/12', 600, 9999);
-add_image_size('6/12@2x', 1200, 9999);
-
-add_image_size('9/12', 800, 9999);
-add_image_size('9/12@2x', 1600, 9999);
-
-add_image_size('12/12', 1200, 9999);
-add_image_size('12/12@2x', 2400, 9999);
-*/
+// Register
+array_map(function ($item) {
+    add_image_size($item[0], $item[1], $item[2] ?? 9999);
+}, array_merge($vw, $xx));
