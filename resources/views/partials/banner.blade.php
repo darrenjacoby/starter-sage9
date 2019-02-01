@@ -8,13 +8,13 @@
     </div>
 
     <div 
-      class="banner-toggle none:lg js-drawer"
+      class="banner-toggle lg:none js-drawer"
       aria-label="Menu">
       {{ __('Menu') }}
       {{-- get_svg('images/icon-nav.svg') --}}
     </div>
 
-    <nav class="nav-primary none block:lg">
+    <nav class="nav-primary none lg:none">
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'banner-nav']) !!}
       @endif
@@ -35,7 +35,7 @@
 {{--
 <div class="banner-flex">
   <div class="banner-logo"></div>
-  <nav class="nav-primary none block:lg"></nav>
+  <nav class="nav-primary none lg:block"></nav>
   <div class="banner-logo"></div>
 </div>
 --}}

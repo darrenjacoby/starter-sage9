@@ -24,7 +24,7 @@ function get_svg($src)
  * 
  * @param $id, $size
  */
-function get_image_src($id, $size = 'thumbnail')
+function get_img_src($id, $size = 'thumbnail')
 {
     return wp_get_attachment_image_url($id, $size);
 }
@@ -34,7 +34,7 @@ function get_image_src($id, $size = 'thumbnail')
  * 
  * @param $id, $size
  */
-function get_image_srcset($id, $size = 'thumbnail')
+function get_img_srcset($id, $size = 'thumbnail')
 {
     return wp_get_attachment_image_srcset($id, $size);
 }
@@ -44,7 +44,7 @@ function get_image_srcset($id, $size = 'thumbnail')
  * 
  * @param $id, $size
  */
-function get_image_alt($id)
+function get_img_alt($id)
 {
     return get_post_meta($id, '_wp_attachment_image_alt', true);
 }
@@ -54,7 +54,7 @@ function get_image_alt($id)
  * 
  * @param $id, $size
  */
-function get_featured_image_id($id, $size = 'thumbnail')
+function get_featured_img_id($id, $size = 'thumbnail')
 {
     if (!$id) {
         $id = get_the_ID();
@@ -71,13 +71,13 @@ function get_featured_image_id($id, $size = 'thumbnail')
 function image($id, $size = 'thumbnail', $max_size = false)
 {   
     // src
-    $src = get_image_src($id, 'placeholder');
+    $src = get_img_src($id, 'placeholder');
     // alt tag
-    $alt = get_image_alt($id);
+    $alt = get_img_alt($id);
     // data-src
-    $data_src = get_image_src($id, $size);
+    $data_src = get_img_src($id, $size);
     // data-srcset
-    $data_srcset = get_image_src($id, $size);
+    $data_srcset = get_img_src($id, $size);
 
     echo "src=\"{$src}\" alt=\"{$alt}\" data-src=\"{$data_src}\" data-srcset=\"{$data_srcset}\"";
 

@@ -1,260 +1,39 @@
-// modified from https://github.com/ryanve/flexboxes
-@each $bp in map-keys($breakpoints) {
-  $c: get-mq-class($bp);
+$classes: (
+  flex-row: (flex-direction row),
+  flex-row-reverse: (flex-direction row-reverse),
+  flex-col: (flex-direction column),
+  flex-col-reverse: (flex-direction column-reverse),
+  flex-wrap: (flex-wrap nowrap),
+  flex-no-wrap: (flex-wrap wrap),
+  flex-wrap-reverse: (flex-wrap wrap-reverse),
+  items-stretch: (align-items stretch),
+  items-start: (align-items flex-start),
+  items-center: (align-items center),
+  items-end: (align-items flex-end),
+  items-baseline: (align-items baseline),
+  content-start: (align-content flex-start),
+  content-center: (align-content center),
+  content-end: (align-content flex-end),
+  content-between: (align-content space-between),
+  content-around: (align-content space-around),
+  self-auto: (align-self auto),
+  self-start: (align-self flex-start),
+  self-center: (align-self center),
+  self-end: (align-self flex-end),
+  self-stretch: (align-self stretch),
+  justify-start: (justify-content flex-start),
+  justify-center: (justify-content center),
+  justify-end: (justify-content flex-end),
+  justify-between: (justify-content space-between),
+  justify-around: (justify-content space-around),
+  flex-initial: (flex initial),
+  flex-1: (flex 1),
+  flex-auto: (flex auto),
+  flex-none: (flex none),
+  flex-grow: (flex-grow 1),
+  flex-shrink: (flex-shrink 1),
+  flex-no-grow: (flex-grow 0),
+  flex-no-shrink:	(flex-shrink 0),
+);
 
-  @include mq($bp) {
-    // flex-direction
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-3
-
-    /*
-    .flex-row#{$c} {
-      flex-direction: row;
-    }
-    */
-
-    /*
-    .flex-row-reverse#{$c} {
-      flex-direction: row-reverse;
-    }
-    */
-
-    /*
-    .flex-column#{$c} {
-      flex-direction: column;
-    }
-    */
-
-    /*
-    .flex-column-reverse#{$c} {
-      flex-direction: column-reverse;
-    }
-    */
-
-    // flex-wrap
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-4
-    .flex-wrap#{$c} {
-      flex-wrap: wrap;
-    }
-
-    /*
-    .flex-nowrap#{$c} {
-      flex-wrap: nowrap;
-    }
-
-    .flex-wrap-reverse#{$c} {
-      flex-wrap: wrap-reverse;
-    }
-    */
-
-    // align-items
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-7
-    .align-items-start#{$c} {
-      align-items: flex-start;
-    }
-
-    .align-items-end#{$c} {
-      align-items: flex-end;
-    }
-
-    .align-items-center#{$c} {
-      align-items: center;
-    }
-
-    /*
-    .align-items-baseline#{$c} {
-      align-items: baseline;
-    }
-    */
-
-    /*
-    .align-items-stretch#{$c} {
-      align-items: stretch;
-    }
-    */
-
-    // justify-content
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-6
-    .justify-content-start#{$c} {
-      justify-content: flex-start;
-    }
-
-    .justify-content-end#{$c} {
-      justify-content: flex-end;
-    }
-
-    .justify-content-center#{$c} {
-      justify-content: center;
-    }
-
-    .justify-content-between#{$c} {
-      justify-content: space-between;
-    }
-
-    .justify-content-around#{$c} {
-      justify-content: space-around;
-    }
-
-    // align-content
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-8
-
-    /*
-    .align-content-start#{$c} {
-      align-content: flex-start;
-    }
-    */
-
-    /*
-    .align-content-end#{$c} {
-      align-content: flex-end;
-    }
-    */
-
-    /*
-    .align-content-center#{$c} {
-      align-content: center;
-    }
-    */
-
-    /*
-    .align-content-between#{$c} {
-      align-content: space-between;
-    }
-    */
-
-    /*
-    .align-content-around#{$c} {
-      align-content: space-around;
-    }
-    */
-
-    /*
-    .align-content-stretch#{$c} {
-      align-content: stretch;
-    }
-    */
-
-    // order
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-9
-    .order-before#{$c} {
-      order: -1;
-    }
-
-    .order-after#{$c} {
-      order: 1;
-    }
-
-    // align-self
-    // https://css-tricks.com/snippets/css/a-guide-to-flexbox/#article-header-id-14
-    .align-self-start#{$c} {
-      align-self: flex-start;
-    }
-
-    .align-self-end#{$c} {
-      align-self: flex-end;
-    }
-
-    .align-self-center#{$c} {
-      align-self: center;
-    }
-
-    /*
-    .align-self-baseline#{$c} {
-      align-self: baseline;
-    }
-    */
-
-    /*
-    .align-self-stretch#{$c} {
-      align-self: stretch;
-    }
-    */
-
-    // flex
-
-    /*
-    .flex-initial#{$c} {
-      flex: 0 1 auto;
-    }
-    */
-
-    /*
-    .flex-auto#{$c} {
-      flex: 1 1 auto;
-    }
-    */
-
-    /*
-    .flex-none#{$c} {
-      flex: 0 0 auto;
-    }
-    */
-
-    // requires $grid-cols, $grid-basis
-    // @for $i from 0 through $grid-cols {
-    //  .flex-#{$i}#{$c} {
-    //    flex: #{$i};
-    //  }
-    // }
-
-    // grow
-    .grow-1 {
-      flex-grow: 1;
-    }
-
-    // @for $i from 0 through $grid-cols {
-    //  .grow-#{$i}#{$c} {
-    //    flex-grow: #{$i};
-    //  }
-    // }
-
-    // shrink
-    // @for $i from 0 through $grid-cols {
-    //  .shrink-#{$i}#{$c} {
-    //    flex-shrink: #{$i};
-    //  }
-    // }
-
-    // basis
-    // renamed to col for faster typing
-    .col-100vw#{$c} {
-      flex-basis: 100vw;
-      // width: 100vw;
-    }
-
-    /*
-    .col-100vh#{$c} {
-      flex-basis: 100vh;
-      // width: 100vh;
-    }
-    */
-
-    // basis alias col
-    @for $i from 0 through $grid-cols {
-      .col-#{$i}#{$c} {
-        position: relative;
-        flex-basis: percentage($i/$grid-cols);
-        // width: percentage($i/$grid-cols);
-      }
-    }
-
-    // col auto
-    .col-auto#{$c} {
-      position: relative;
-      flex-basis: auto;
-      // width: auto;
-    }
-
-    // row
-    .row#{$c} {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: ($grid-gutter / -2);
-      margin-left: ($grid-gutter / -2);
-    }
-
-    .row#{$c} > div {
-      padding-right: ($grid-gutter / 2);
-      padding-left: ($grid-gutter / 2);
-    }
-  }
-}
+@include make-classes-mq($classes);
