@@ -1,23 +1,7 @@
-@each $bp in map-keys($breakpoints) {
-  $c: get-mq-class($bp);
+$classes: (
+  text-left: (text-align left),
+  text-center: (text-align center),
+  text-right: (text-align right),
+);
 
-  @include mq($bp) {
-    .text-left#{$c} {
-      text-align: left;
-    }
-
-    .text-right#{$c} {
-      text-align: right;
-    }
-
-    .text-center#{$c} {
-      text-align: center;
-    }
-
-    /*
-    .text-justify#{$c} {
-      text-align: justify;
-    }
-    */
-  }
-}
+@include make-classes-mq($classes);

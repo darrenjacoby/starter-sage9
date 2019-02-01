@@ -1,0 +1,34 @@
+/**
+ * Output list of classes
+ *
+ * @requires $classes
+ */
+@mixin make-classes($classes) {
+  @each $class, $prop in $classes {
+    .#{$class} {
+      #{nth($prop, 1)}: nth($prop, 2);
+    }
+  }
+}
+
+/**
+ * Output list of classes and prefix breakpoint
+ *
+ * @requires $classes
+ * @requires $breakpoints
+ */
+@mixin make-classes-mq($classes) {
+  // no mq for base
+  @include make-classes($classes);
+
+  // then include mqs
+  @each $bp in map-keys($breakpoints) {
+    @include mq($bp) {
+      @each $class, $prop in $classes {
+        .#{$bp}\\:#{$class} {
+          #{nth($prop, 1)}: nth($prop, 2);
+        }
+      }
+    }
+  }
+}
