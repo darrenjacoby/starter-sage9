@@ -21,6 +21,10 @@
 !app/Controllers/
 !app/Controllers/**/**
 
+# app/Props/
+!app/Props/
+!app/Props/**/**
+
 # resources
 !resources/
 
