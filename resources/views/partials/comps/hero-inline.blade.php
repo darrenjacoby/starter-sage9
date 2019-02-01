@@ -17,7 +17,7 @@
     <div class="flex justify-content-between {{-- align-items-center --}}">
 
       {{-- img --}}
-      <div class="col-12 col-7:md col-8:lg">{{-- col --}}
+      <div class="col-12 md:col-7 lg:col-8">{{-- col --}}
         @if ($item->image)
           <div class="img-mask ratio-2-1">{{-- img ratio --}}
             <div class="rellax-mask">
@@ -30,7 +30,7 @@
       </div>{{-- /.col-x --}}
 
       {{-- meta --}}
-      <div class="col-12 col-5:md col-3:lg">{{-- col --}}
+      <div class="col-12 md:col-5 lg:col-3">{{-- col --}}
         <div class="hero-main">
           @if ($item->title)
             <div class="hero-title">

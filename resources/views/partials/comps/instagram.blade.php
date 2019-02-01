@@ -18,7 +18,7 @@
 <div class="container">
   <div class="instagram row">
     @foreach (array_slice($props, 0, $config['limit'] ?? 6) as $item){{-- limit --}}
-      <div class="col-12 col-4:md">{{-- col --}}
+      <div class="col-12 md:col-4">{{-- col --}}
         <article class="grid-item">
 
           {{-- img --}}

@@ -14,7 +14,7 @@
 
 <div class="grid-bricks row">
   @foreach ($props as $item)
-    <div class="col-12 {{ $loop->index % 2 ? 'col-5:md' : 'col-7:md' }} {{ $loop->index % 3 ?: 'order-before' }} grow-1">{{-- col --}}
+    <div class="col-12 {{ $loop->index % 2 ? 'md:col-5' : 'md:col-7' }} {{ $loop->index % 3 ?: 'order-before' }} grow-1">{{-- col --}}
       <article class="grid-item">
 
         {{-- img --}}

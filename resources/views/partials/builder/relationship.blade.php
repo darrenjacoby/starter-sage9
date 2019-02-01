@@ -3,5 +3,5 @@
 --}}
 
 @include('partials.comps.grid', [
-  'props' => App\Transform\Presets\FieldRelationship::get($block->relationship),
+  'props' => (new App\Props\Presets\Acf\Relationship($block->relationship))->return(),
 ])

@@ -1,7 +1,6 @@
 {{--
   Builder: Taxonomy
 --}}
-
 @include('partials.comps.grid-bricks', [
-  'props' => App\Transform\Presets\FieldTaxonomy::get($block->taxonomy),
+  'props' => (new App\Props\Presets\Acf\Taxonomy($block->taxonomy))->return(),
 ])

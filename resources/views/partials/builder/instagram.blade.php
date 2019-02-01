@@ -10,6 +10,8 @@
 --}}
 
 {{-- for php --}}
+{{--
 @include('partials.comps.instagram', [
-  'props' => App\Transform\Presets\FieldInstagram::get($block->username),
+  'props' => (new App\Props\Presets\Provider\Instagram($block->username))->return(),
 ])
+--}}

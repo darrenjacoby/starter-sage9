@@ -32,7 +32,7 @@
         {{-- meta --}}
         <div class="container">
           <div class="row {{-- justify-content-center --}}">
-            <div class="col-12 col-6:md">{{-- col --}}
+            <div class="col-12 md:col-6">{{-- col --}}
               <header class="hero-main">
                 @if ($item->title)
                   <div class="hero-title">

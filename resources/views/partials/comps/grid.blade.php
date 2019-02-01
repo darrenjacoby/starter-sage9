@@ -14,7 +14,7 @@
 
 <div class="grid row">
   @foreach ($props as $item)
-    <div class="col-12 col-4:md">{{-- col --}}
+    <div class="col-12 md:col-4">{{-- col --}}
       <article class="grid-item">
 
         {{-- img --}}
