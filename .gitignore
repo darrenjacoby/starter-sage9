@@ -21,10 +21,6 @@
 !app/Controllers/
 !app/Controllers/**/**
 
-# app/Transform/
-!app/Transform/
-!app/Transform/**/**
-
 # resources
 !resources/
 
