@@ -14,14 +14,11 @@
 /**
  * Build classes with mq prefix
  *
- * @requires $classes
- * @requires $breakpoints
+ * @requires $breakpoints, $classes
  */
 @mixin make-classes-mq($classes) {
-  // no mq for base
   @include make-classes($classes);
 
-  // then include mqs
   @each $bp in map-keys($breakpoints) {
     @include mq($bp) {
       @each $class, $prop in $classes {
