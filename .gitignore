@@ -21,9 +21,9 @@
 !app/Controllers/
 !app/Controllers/**/**
 
-# app/Transform/
-!app/Transform/
-!app/Transform/**/**
+# app/Props/
+!app/Props/
+!app/Props/**/**
 
 # resources
 !resources/
