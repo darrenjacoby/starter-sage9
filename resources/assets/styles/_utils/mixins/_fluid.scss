@@ -9,31 +9,19 @@
 @mixin fluid($props, $max-value, $ratio: $fluid-ratio, $min-vw: get-break($fluid-min), $max-vw: get-break($fluid-max)) {
   $min-value: $max-value / $ratio;
 
-  // always calc in rem
-  @if (unit($min-value) == "px") {
-    $min-value: calc-rem($min-value);
+  // calc neg ratio
+  @if ($ratio < 0) {
+    $min-value: $max-value * ($ratio * -1);
   }
 
-  @if (unit($max-value) == "px") {
-    $max-value: calc-rem($max-value);
-  }
-
-  @if (unit($min-vw) == "px") {
-    $min-vw: calc-rem($min-vw);
-  }
-
-  @if (unit($max-vw) == "px") {
-    $max-vw: calc-rem($max-vw);
-  }
-
-  // run
+  // create props
   @each $prop in $props {
     #{$prop}: $min-value;
   }
 
   @media (min-width: $min-vw) {
     @each $prop in $props {
-      #{$prop}: calc(#{$min-value} + #{get-unitless($max-value - $min-value)} * (100vw - #{$min-vw}) / #{get-unitless($max-vw - $min-vw)});
+      #{$prop}: calc(#{calc-rem($min-value)} + #{get-unitless(calc-rem($max-value) - calc-rem($min-value))} * (100vw - #{calc-rem($min-vw)}) / #{get-unitless(calc-rem($max-vw) - calc-rem($min-vw))});
     }
   }
 
