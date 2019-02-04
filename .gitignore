@@ -14,10 +14,6 @@
 !app/utils.php
 !app/helpers.php
 
-# app/Controllers/
-!app/Controllers/
-!app/Controllers/**/**
-
 # app/Props/
 !app/Props/
 !app/Props/**/**
