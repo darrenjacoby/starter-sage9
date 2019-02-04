@@ -2,19 +2,19 @@
 import throttle from 'lodash/throttle';
 
 // wp generated wp classes
-let el = '.menu-item-has-children > a';
+const el = '.menu-item-has-children > a';
 
 // declare before querySelectorAll
 let els;
 
 // anim classes
-let anim = {
+const anim = {
   on: 'is-active',
   off: 'is-exiting',
 }
 
 // req min screen size
-let screen = 768;
+const screen = 768;
 
 /**
  * Open
@@ -45,7 +45,7 @@ function close(ul) {
   // add is-exiting class
   ul.classList.add(anim.off);
 
-  // on anim complete
+  // on anim compconste
   // https://medium.com/@DavideRama/removeeventlistener-and-anonymous-functions-ab9dbabd3e7b
   ul.addEventListener('animationend', function _listener() {
     // remove all anim classes

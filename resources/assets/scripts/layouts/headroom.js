@@ -1,10 +1,10 @@
 // yarn add headroom.js
 import Headroom from 'headroom.js';
 
-let el = '.js-headroom';
+const el = '.js-headroom';
 
 // https://github.com/WickyNilliams/headroom.js#options
-let config = {
+const config = {
   offset: 150,
   classes: {
     // el initialised
@@ -34,7 +34,7 @@ function init() {
   }
 
   // new headroom
-  let headroom = new Headroom(document.querySelector(el), config);
+  const headroom = new Headroom(document.querySelector(el), config);
   // init
   headroom.init();
 }

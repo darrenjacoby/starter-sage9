@@ -1,9 +1,9 @@
 // yarn add rellax
 import Rellax from 'rellax';
 
-let el = '[data-rellax]';
+const el = '[data-rellax]';
 
-let config = {
+const config = {
   speed: -1,
   center: true,
   wrapper: null,
@@ -22,7 +22,7 @@ function init() {
   }
 
   // eslint-disable-next-line
-  let rellax = new Rellax(el, config);
+  const rellax = new Rellax(el, config);
 }
 
 export default init;

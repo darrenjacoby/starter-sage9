@@ -1,6 +1,6 @@
 import intersectionObserver from '../_utils/intersectionObserver';
 
-let el = '[data-anim]';
+const el = '[data-anim]';
 
 /**
  * Init
@@ -12,7 +12,7 @@ function init() {
   }
 
   // observer
-  let instances = intersectionObserver(el, {
+  const instances = intersectionObserver(el, {
     // once: true,
     // rootMargin: '0% 0% 0% 0%',
     // on enter

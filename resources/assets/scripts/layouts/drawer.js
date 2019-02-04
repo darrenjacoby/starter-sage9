@@ -1,8 +1,8 @@
 // yarn add lodash
 import throttle from 'lodash/throttle';
 
-let el = '.js-drawer';
-let state = 'drawer-open';
+const el = '.js-drawer';
+const state = 'drawer-open';
 
 /**
  * Toggle
@@ -53,7 +53,7 @@ function init() {
   }
 
   // get toggle els
-  let els = document.querySelectorAll(el);
+  const els = document.querySelectorAll(el);
   // click
   Array.from(els).map(el => el.addEventListener('click', event => eventClick(event)));
   // esc

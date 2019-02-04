@@ -6,7 +6,7 @@ import FontFaceObserver from 'fontfaceobserver';
  * Init
  */
 function init() {
-  let font = new FontFaceObserver('__FONT__');
+  const font = new FontFaceObserver('__FONT__');
 
   font.load().then(() => {
     document.body.classList.add('fonts-loaded');

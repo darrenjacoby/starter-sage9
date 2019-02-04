@@ -1,9 +1,9 @@
 // yarn add jump.js
 import jump from 'jump.js'
 
-let el = '[data-jump]';
+const el = '[data-jump]';
 
-let config = {
+const config = {
   /*
   duration: 1000,
   offset: 0,
@@ -23,12 +23,12 @@ function init() {
   }
 
   // get all els
-  let els = document.querySelectorAll(el);
+  const els = document.querySelectorAll(el);
 
   // foreach
   Array.from(els).map((el) => {
     // get location
-    let loc = el.getAttribute('data-jump');
+    const loc = el.getAttribute('data-jump');
     // event listener
     if (loc) {
       el.addEventListener('click', () => jump(loc, config));
