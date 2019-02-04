@@ -5,6 +5,10 @@
  * @params $size
  */
 @function calc-rem($size) {
-  /* stylelint-disable-next-line length-zero-no-unit */
-  @return ($size / 16px) + 0rem;
+  @if (unit($size) == "px") {
+    /* stylelint-disable-next-line length-zero-no-unit */
+    $size: ($size / 16px) + 0rem;
+  }
+
+  @return $size;
 }

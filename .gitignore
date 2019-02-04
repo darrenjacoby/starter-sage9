@@ -10,12 +10,9 @@
 
 # app
 !app/
-!app/setup.php
-!app/enqueues.php
-!app/images.php
-!app/intervention.php
+!app/config.php
 !app/utils.php
-!app/polyfills.php
+!app/helpers.php
 
 # app/Controllers/
 !app/Controllers/
@@ -24,6 +21,15 @@
 # app/Props/
 !app/Props/
 !app/Props/**/**
+
+# config
+!config/
+!config/apis.php
+!config/images.php
+!config/intervetion.php
+!config/menus.php
+!config/polyfills.php
+!config/theme-support.php
 
 # resources
 !resources/

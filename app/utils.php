@@ -56,11 +56,7 @@ function get_img_alt($id)
  */
 function get_featured_img_id($id, $size = 'thumbnail')
 {
-    if (!$id) {
-        $id = get_the_ID();
-    }
-
-    return get_post_thumbnail_id($id, $size);
+    return get_post_thumbnail_id($id ?? get_the_ID(), $size);
 }
 
 /**
