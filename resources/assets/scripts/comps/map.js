@@ -4,7 +4,7 @@
 import GoogleMapsLoader from 'google-maps';
 
 // https://developers.google.com/maps/documentation/javascript/get-api-key
-GoogleMapsLoader.KEY = 'AIzaSyA9Rns1n68TxW3t3P_eN6EywKYr27d7fOA';
+GoogleMapsLoader.KEY = 'x';
 
 // map
 let map;
