@@ -24,7 +24,7 @@
 !config/post-types/.gitkeep
 !config/api-keys.php
 !config/images.php
-!config/intervetion.php
+!config/intervention.php
 !config/menus.php
 !config/polyfills.php
 !config/theme-support.php
