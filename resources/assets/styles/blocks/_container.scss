@@ -1,3 +1,4 @@
+// make classes without mq prefixes
 .container {
   position: relative;
   margin-left: auto;
@@ -6,15 +7,27 @@
   max-width: 90%;
 }
 
-.container-esc-l {
+.container-esc {
   margin-left: calc(50% - 50vw);
-}
-
-.container-esc-r {
   margin-right: calc(50% - 50vw);
 }
 
-.container-esc {
-  @extend .container-esc-l;
-  @extend .container-esc-r;
-}
+/*
+$escs: (
+  container-esc-l: (margin-left calc(50% - 50vw)),
+  container-esc-r: (margin-right calc(50% - 50vw)),
+);
+
+$esc-both: (
+  container-esc: (
+    map-get($escs, container-esc-l),
+    map-get($escs, container-esc-r),
+  ),
+);
+
+// .container-esc (props from $escs)
+// @include make-classes($esc-both);
+
+// .container-esc-l, md:container-esc-l lg:container-esc-l etc
+// @include make-classes-mq($escs);
+*/

@@ -4,9 +4,20 @@
  * @requires $classes
  */
 @mixin make-classes($classes) {
-  @each $class, $prop in $classes {
-    .#{$class} {
-      #{nth($prop, 1)}: nth($prop, 2);
+  @each $class, $props in $classes {
+    // multi list
+    @if (type-of(nth($props, 1)) == list) {
+      .#{$class} {
+        @each $prop in $props {
+          #{nth($prop, 1)}: nth($prop, 2);
+        }
+      }
+    }
+    // single list
+    @else {
+      .#{$class} {
+        #{nth($props, 1)}: nth($props, 2);
+      }
     }
   }
 }
@@ -21,9 +32,20 @@
 
   @each $bp in map-keys($breakpoints) {
     @include mq($bp) {
-      @each $class, $prop in $classes {
-        .#{$bp}\\:#{$class} {
-          #{nth($prop, 1)}: nth($prop, 2);
+      @each $class, $props in $classes {
+        // multi list
+        @if (type-of(nth($props, 1)) == list) {
+          .#{$bp}\\:#{$class} {
+            @each $prop in $props {
+              #{nth($prop, 1)}: nth($prop, 2);
+            }
+          }
+        }
+        // single list
+        @else {
+          .#{$bp}\\:#{$class} {
+            #{nth($props, 1)}: nth($props, 2);
+          }
         }
       }
     }
