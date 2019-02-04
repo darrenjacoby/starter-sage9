@@ -20,7 +20,9 @@
 
 # config
 !config/
-!config/apis.php
+!config/acf-json/.gitkeep
+!config/post-types/.gitkeep
+!config/api-keys.php
 !config/images.php
 !config/intervetion.php
 !config/menus.php
