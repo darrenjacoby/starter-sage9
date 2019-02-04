@@ -53,9 +53,9 @@ add_action('wp_enqueue_scripts', function ($polyfills) {
  * 
  * @link https://github.com/soberwp/intervention
  */
-if (function_exists('\Sober\Intervention\intervention()')) {
+if (function_exists('\Sober\Intervention\intervention')) {
     array_map(function ($item) {
-        \Sober\Intervention\intervention\intervention($item[0], $item[1], $item[2]);
+        \Sober\Intervention\intervention($item[0], $item[1], $item[2]);
     }, include locate_config('intervention'));
 }
 
