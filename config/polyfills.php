@@ -10,4 +10,5 @@ return [
     'Array.from',
     'Promise',
     'Element.prototype.classList',
+    'Object.assign',
 ];
