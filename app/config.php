@@ -25,18 +25,24 @@ add_action('after_setup_theme', function () use ($theme_supports) {
  * 
  * @link https://developer.wordpress.org/reference/functions/add_image_size/
  */
-array_map(function ($item) {
-    register_nav_menus([$item]);
-}, include locate_config('menus'));
+$menus = include locate_config('menus');
+
+add_action('after_setup_theme', function () use ($menus) {
+    register_nav_menus($menus);
+});
 
 /**
  * Images
  * 
  * @link https://developer.wordpress.org/reference/functions/add_image_size/
  */
-array_map(function ($item) {
-    add_image_size($item[0], $item[1], $item[2] ?? 9999, $item[3] ?? false);
-}, include locate_config('images'));
+$images = include locate_config('images');
+
+add_action('after_setup_theme', function () use ($images) {
+    array_map(function ($item) {
+        add_image_size($item[0], $item[1], $item[2] ?? 9999, $item[3] ?? false);
+    }, $images);
+});
 
 /**
  * Polyfills
